@@ -84,6 +84,21 @@ def configuration():
     if _CONFIG is None:raise RuntimeError('Configure --workspace-root,--output-root,--input-manifest before accessing local files')
     return _CONFIG
 
+def configure_backend_policy():
+    """Make the executed private loader's inherited policy explicit here.
+
+    This runs only inside an explicitly executed CLI, before any official model
+    is constructed or fit. Imports stay inert and training/inference math is
+    unchanged. The four assignments match all three producer loader prefixes.
+    No stronger global deterministic-algorithms policy is introduced.
+    """
+    import torch
+    torch.backends.cudnn.deterministic=True
+    torch.backends.cudnn.benchmark=False
+    torch.backends.cuda.matmul.allow_tf32=False
+    torch.backends.cudnn.allow_tf32=False
+    return dict(cudnn_deterministic=bool(torch.backends.cudnn.deterministic),cudnn_benchmark=bool(torch.backends.cudnn.benchmark),cuda_matmul_allow_tf32=bool(torch.backends.cuda.matmul.allow_tf32),cudnn_allow_tf32=bool(torch.backends.cudnn.allow_tf32),policy_source='Explicit copy of the four assignments inherited by executed wrappers from retained producer loader prefixes',strict_global_deterministic_algorithms_policy_modified=False)
+
 def checked_output(path):
     c=configuration();value=Path(path)
     target=value.resolve() if value.is_absolute() else (c.output_root/value).resolve()

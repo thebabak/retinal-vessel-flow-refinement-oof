@@ -179,10 +179,11 @@ def main():
     if (out/f'completed_training_evaluation_{tag}.json').exists():print('Already completed; no files changed.');return
     out.mkdir(parents=True,exist_ok=True)
     import torch
+    backend_policy=portable.configure_backend_policy()
     if not torch.cuda.is_available():raise RuntimeError('CUDA is required for final fits')
     torch.cuda.set_per_process_memory_fraction(a.memory_fraction);torch.set_num_threads(4);device='cuda'
     official=official_components(a.official_source)
-    plan=dict(version=tag,portable_export=True,portable_input_manifest_sha256=portable.configuration().manifest_sha256,created_at=stamp(),method='Official FR-UNet network controlled-protocol adaptation',official_repository='https://github.com/lseventeen/FR-UNet',official_commit=official.commit,source_sha256=official.source_sha256,model_AST_sha256=official.model_AST_sha256,initialization_AST_sha256=official.initialization_AST_sha256,wrapper_sha256=sha(__file__),shared_loader_helper_sha256=sha(COMMON_SOURCE),license='MIT',pretrained_weights_used=False,original_paper_reproduction=False,
+    plan=dict(version=tag,backend_policy=backend_policy,portable_export=True,portable_input_manifest_sha256=portable.configuration().manifest_sha256,created_at=stamp(),method='Official FR-UNet network controlled-protocol adaptation',official_repository='https://github.com/lseventeen/FR-UNet',official_commit=official.commit,source_sha256=official.source_sha256,model_AST_sha256=official.model_AST_sha256,initialization_AST_sha256=official.initialization_AST_sha256,wrapper_sha256=sha(__file__),shared_loader_helper_sha256=sha(COMMON_SOURCE),license='MIT',pretrained_weights_used=False,original_paper_reproduction=False,
         datasets=DATASETS,training_seeds=SEEDS,pilot_seed=PILOT_SEED,learning_rate_candidates=LRS,epochs=a.epochs,optimizer='Adam;weight_decay1e-5;cosine120epochs',logical_batch_size=4,microbatch_size=1,GPU_memory_fraction_limit=a.memory_fraction,
         objective='Official config full-image BCEWithLogits(posweight1),noDice',architecture='Unchanged official FR_UNet1channel,feature_scale2,dropout.2,fuseTrue,out_aveTrue',input='Retained512green/CLAHE,GT-freeinference',comparison_grid=512,evaluation_threshold=.5,
         training_augmentation='Official alignedH/Vflips andrandomright-angle rotations',validation_augmentation=False,

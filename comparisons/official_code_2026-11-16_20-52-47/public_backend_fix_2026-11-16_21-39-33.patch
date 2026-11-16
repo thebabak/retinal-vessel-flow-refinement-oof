@@ -1,0 +1,99 @@
+--- a/official_comparisons/frunet.py
++++ b/official_comparisons/frunet.py
+@@ -179,10 +179,11 @@
+     if (out/f'completed_training_evaluation_{tag}.json').exists():print('Already completed; no files changed.');return
+     out.mkdir(parents=True,exist_ok=True)
+     import torch
++    backend_policy=portable.configure_backend_policy()
+     if not torch.cuda.is_available():raise RuntimeError('CUDA is required for final fits')
+     torch.cuda.set_per_process_memory_fraction(a.memory_fraction);torch.set_num_threads(4);device='cuda'
+     official=official_components(a.official_source)
+-    plan=dict(version=tag,portable_export=True,portable_input_manifest_sha256=portable.configuration().manifest_sha256,created_at=stamp(),method='Official FR-UNet network controlled-protocol adaptation',official_repository='https://github.com/lseventeen/FR-UNet',official_commit=official.commit,source_sha256=official.source_sha256,model_AST_sha256=official.model_AST_sha256,initialization_AST_sha256=official.initialization_AST_sha256,wrapper_sha256=sha(__file__),shared_loader_helper_sha256=sha(COMMON_SOURCE),license='MIT',pretrained_weights_used=False,original_paper_reproduction=False,
++    plan=dict(version=tag,backend_policy=backend_policy,portable_export=True,portable_input_manifest_sha256=portable.configuration().manifest_sha256,created_at=stamp(),method='Official FR-UNet network controlled-protocol adaptation',official_repository='https://github.com/lseventeen/FR-UNet',official_commit=official.commit,source_sha256=official.source_sha256,model_AST_sha256=official.model_AST_sha256,initialization_AST_sha256=official.initialization_AST_sha256,wrapper_sha256=sha(__file__),shared_loader_helper_sha256=sha(COMMON_SOURCE),license='MIT',pretrained_weights_used=False,original_paper_reproduction=False,
+         datasets=DATASETS,training_seeds=SEEDS,pilot_seed=PILOT_SEED,learning_rate_candidates=LRS,epochs=a.epochs,optimizer='Adam;weight_decay1e-5;cosine120epochs',logical_batch_size=4,microbatch_size=1,GPU_memory_fraction_limit=a.memory_fraction,
+         objective='Official config full-image BCEWithLogits(posweight1),noDice',architecture='Unchanged official FR_UNet1channel,feature_scale2,dropout.2,fuseTrue,out_aveTrue',input='Retained512green/CLAHE,GT-freeinference',comparison_grid=512,evaluation_threshold=.5,
+         training_augmentation='Official alignedH/Vflips andrandomright-angle rotations',validation_augmentation=False,
+--- a/official_comparisons/portable_api.py
++++ b/official_comparisons/portable_api.py
+@@ -84,6 +84,21 @@
+     if _CONFIG is None:raise RuntimeError('Configure --workspace-root,--output-root,--input-manifest before accessing local files')
+     return _CONFIG
+ 
++def configure_backend_policy():
++    """Make the executed private loader's inherited policy explicit here.
++
++    This runs only inside an explicitly executed CLI, before any official model
++    is constructed or fit. Imports stay inert and training/inference math is
++    unchanged. The four assignments match all three producer loader prefixes.
++    No stronger global deterministic-algorithms policy is introduced.
++    """
++    import torch
++    torch.backends.cudnn.deterministic=True
++    torch.backends.cudnn.benchmark=False
++    torch.backends.cuda.matmul.allow_tf32=False
++    torch.backends.cudnn.allow_tf32=False
++    return dict(cudnn_deterministic=bool(torch.backends.cudnn.deterministic),cudnn_benchmark=bool(torch.backends.cudnn.benchmark),cuda_matmul_allow_tf32=bool(torch.backends.cuda.matmul.allow_tf32),cudnn_allow_tf32=bool(torch.backends.cudnn.allow_tf32),policy_source='Explicit copy of the four assignments inherited by executed wrappers from retained producer loader prefixes',strict_global_deterministic_algorithms_policy_modified=False)
++
+ def checked_output(path):
+     c=configuration();value=Path(path)
+     target=value.resolve() if value.is_absolute() else (c.output_root/value).resolve()
+--- a/official_comparisons/segflow.py
++++ b/official_comparisons/segflow.py
+@@ -292,11 +292,12 @@
+     if (out/f'completed_training_evaluation_{tag}.json').is_file():print('Completed study exists; no files changed.');return
+     out.mkdir(parents=True,exist_ok=True)
+     import torch
++    backend_policy=portable.configure_backend_policy()
+     if not torch.cuda.is_available():raise RuntimeError('CUDA required for final fits')
+     torch.cuda.set_per_process_memory_fraction(args.memory_fraction);torch.set_num_threads(4);device='cuda'
+     official=official_components(args.official_source)
+     sources={str(x.relative_to(official.source)).replace('\\','/'):sha(x) for x in official.source.rglob('*.py')}
+-    plan=dict(version=tag,portable_export=True,portable_input_manifest_sha256=portable.configuration().manifest_sha256,method='Official FMS2 SegFlow controlled-budget retinal adaptation',official_repository='https://github.com/BabakAsadi94/FMS2',official_commit=official.commit,license='MIT including upstream Tong CFM notices',source_sha256=sources,definitions=official.extracted,
++    plan=dict(version=tag,backend_policy=backend_policy,portable_export=True,portable_input_manifest_sha256=portable.configuration().manifest_sha256,method='Official FMS2 SegFlow controlled-budget retinal adaptation',official_repository='https://github.com/BabakAsadi94/FMS2',official_commit=official.commit,license='MIT including upstream Tong CFM notices',source_sha256=sources,definitions=official.extracted,
+         datasets=DATASETS,training_seeds=SEEDS,pilot_seed=PILOT_SEED,learning_rate_candidates=LRS,epochs=args.epochs,logical_batch_size=4,microbatch_size=args.microbatch,GPU_memory_fraction_limit=args.memory_fraction,
+         optimizer='Adam;weight_decay0',warmup_fraction=.05,EMA_decay=.99,time_sampling='Official Euler eleven-point cycle0,0.1,...,1',
+         official_reference_schedule_NOT_executed=dict(updates=48002,learning_rate=1e-5,warmup_updates=10000,EMA_decay=.9999),
+--- a/README.md
++++ b/README.md
+@@ -12,6 +12,8 @@
+ | [FR-UNet](https://github.com/lseventeen/FR-UNet) | `1856bc206055fdfccde184d0ebf9ac8c3207387d` | Official 7,374,347-parameter one-channel network, five-head logit averaging, initialization and BCEWithLogits(pos_weight1);aligned flips/right-angle augmentation | Retained green/CLAHE512 whole images;120epochs;logicalbatch4/microbatch1;validation-only LR/checkpoint selection;FP32;noDTI |
+ 
+ FR BatchNorm observes microbatch1. Gradient accumulation does not reproduce BatchNorm batch4. Upstream pretrained models are not used. The required official source snapshots, selected documentation/configuration, and full MIT notices are byte-preserved. FR's unused author CLI/data scripts with machine-specific defaults are omitted; `SOURCE.json` identifies the exact included subset. The portable entrypoints do not execute unused author training/data scripts and do not require their paths or `.git` directories.
++
++The portable entrypoints explicitly match the backend settings inherited by the executed private loaders: cuDNN deterministic=True, cuDNN benchmark=False, CUDA matmul TF32=False, and cuDNN TF32=False. These four settings are applied before any official model construction/fitting and recorded in each new run's plan. The original portable manifest adapter omitted that inherited setup; this public-only packaging correction does not alter the private executed runs, selected checkpoints, vendor sources, or scientific training/inference functions. Imports remain inert. Do not merge outputs from the earlier portable packaging into corrected runs: the wrapper hash guard rejects that adoption.
+ 
+ ## Local inputs
+ 
+--- a/tests/test_portability.py
++++ b/tests/test_portability.py
+@@ -1,7 +1,7 @@
+ """Synthetic path/gate checks only: no retinal input, model run or CUDA work."""
+ from pathlib import Path
+ from types import SimpleNamespace
+-import copy,json,os,subprocess,sys,tempfile,unittest
++import ast,copy,json,os,subprocess,sys,tempfile,unittest
+ from unittest.mock import patch
+ from official_comparisons import portable_api as api
+ 
+@@ -48,6 +48,21 @@
+         env=dict(os.environ,PYTHONDONTWRITEBYTECODE='1')
+         result=subprocess.run([sys.executable,'-c',code],cwd=PACKAGE,env=env,capture_output=True,text=True)
+         self.assertEqual(result.returncode,0,result.stderr)
++
++    def test_backend_policy_sets_exact_inherited_flags_without_CUDA_API(self):
++        fake=SimpleNamespace(backends=SimpleNamespace(cudnn=SimpleNamespace(deterministic=False,benchmark=True,allow_tf32=True),cuda=SimpleNamespace(matmul=SimpleNamespace(allow_tf32=True))))
++        with patch.dict(sys.modules,torch=fake):policy=api.configure_backend_policy()
++        self.assertTrue(policy['cudnn_deterministic']);self.assertFalse(policy['cudnn_benchmark']);self.assertFalse(policy['cuda_matmul_allow_tf32']);self.assertFalse(policy['cudnn_allow_tf32'])
++        self.assertFalse(policy['strict_global_deterministic_algorithms_policy_modified'])
++
++    def test_backend_setup_precedes_official_model_loading_and_is_recorded(self):
++        for method in ['segflow','frunet']:
++            tree=ast.parse((PACKAGE/'official_comparisons'/f'{method}.py').read_text());main=next(n for n in tree.body if isinstance(n,ast.FunctionDef) and n.name=='main')
++            setup=[n for n in ast.walk(main) if isinstance(n,ast.Call) and isinstance(n.func,ast.Attribute) and n.func.attr=='configure_backend_policy']
++            loading=[n for n in ast.walk(main) if isinstance(n,ast.Call) and isinstance(n.func,ast.Name) and n.func.id=='official_components']
++            self.assertEqual(len(setup),1);self.assertTrue(loading);self.assertLess(setup[0].lineno,min(n.lineno for n in loading))
++            plans=[n for n in ast.walk(main) if isinstance(n,ast.Call) and isinstance(n.func,ast.Name) and n.func.id=='dict' and any(k.arg=='version' for k in n.keywords)]
++            self.assertTrue(any(any(k.arg=='backend_policy' for k in n.keywords) for n in plans))
+ 
+     def test_paths_relocate_and_output_is_confined(self):
+         with tempfile.TemporaryDirectory() as temp:

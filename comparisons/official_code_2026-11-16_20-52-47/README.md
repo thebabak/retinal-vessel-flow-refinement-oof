@@ -13,6 +13,8 @@ The comparisons are controlled-protocol adaptations, not reproductions of the or
 
 FR BatchNorm observes microbatch1. Gradient accumulation does not reproduce BatchNorm batch4. Upstream pretrained models are not used. The required official source snapshots, selected documentation/configuration, and full MIT notices are byte-preserved. FR's unused author CLI/data scripts with machine-specific defaults are omitted; `SOURCE.json` identifies the exact included subset. The portable entrypoints do not execute unused author training/data scripts and do not require their paths or `.git` directories.
 
+The portable entrypoints explicitly match the backend settings inherited by the executed private loaders: cuDNN deterministic=True, cuDNN benchmark=False, CUDA matmul TF32=False, and cuDNN TF32=False. These four settings are applied before any official model construction/fitting and recorded in each new run's plan. The original portable manifest adapter omitted that inherited setup; this public-only packaging correction does not alter the private executed runs, selected checkpoints, vendor sources, or scientific training/inference functions. Imports remain inert. Do not merge outputs from the earlier portable packaging into corrected runs: the wrapper hash guard rejects that adoption.
+
 ## Local inputs
 
 Install the dependencies in `requirements.txt`, using a PyTorch build compatible with your own CUDA hardware. Run from the export root with `python -m official_comparisons.segflow` or `python -m official_comparisons.frunet`. Importing either module is inert: no data/model/checkpoint loading, CUDA initialization, fitting, scoring or output creation occurs at import.

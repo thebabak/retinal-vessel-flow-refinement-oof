@@ -1,0 +1,101 @@
+{
+  "created_at": "2026-11-16_21-39-33",
+  "scope": "PUBLIC portable packaging only; no private/live/runtime changes",
+  "base_public_package": "comparisons/official_code_2026-11-16_20-52-47",
+  "changed_files": {
+    "official_comparisons/frunet.py": {
+      "previous_sha256": "5e9c951463eb157415a57c06125badfbaa9d72122b156c80e151ac2350b08541",
+      "corrected_sha256": "efa6d794085e8fd845b9804d69513cdfef30cea6939ed954be008b9cacd8a5cc"
+    },
+    "official_comparisons/portable_api.py": {
+      "previous_sha256": "976fda7c48a19162c9102ba79678f713610c6a19b51836cc34eb605697056685",
+      "corrected_sha256": "8d51248e7c7daad97a78abe29a9715c51174850a5d637ca8c92602e5f58ee7c4"
+    },
+    "official_comparisons/segflow.py": {
+      "previous_sha256": "f898ee00b2726ecd1926f7a67e807d0e0eab27c5db79614865c6d59f118acf6c",
+      "corrected_sha256": "4ee6113cce331730d856a7eadb8919dea8a8d4d305d2436e3dbddd68ccf80e61"
+    },
+    "README.md": {
+      "previous_sha256": "b647e345c3c6cbb96884dad22a917152942ce7eaeb61292a972e6012fbfa3d56",
+      "corrected_sha256": "eaf32afd94aadda2ea10655da596e0632514555a0c3565516f37a7f1bcafbc17"
+    },
+    "tests/test_portability.py": {
+      "previous_sha256": "d4e293e6118ff710e93d51d9d2936f511df73df86455389fc46fbc9154b4f3ad",
+      "corrected_sha256": "fc009d0690caff1f2a2af60f4b224c44158eea4747a8d414ab5a493d34a84efe"
+    }
+  },
+  "new_policy": {
+    "cudnn.deterministic": true,
+    "cudnn.benchmark": false,
+    "cuda.matmul.allow_tf32": false,
+    "cudnn.allow_tf32": false
+  },
+  "static_backend_assignment_proof": {
+    "CHASE": {
+      "producer_source": "paired_reproduction/run.py",
+      "producer_source_sha256": "08a986392ddd329ea36e878ff954564e207319ea9dc86dd9b3c85abd7a551a7c",
+      "four_backend_assignment_ASTs_exactly_identical": true
+    },
+    "DRIVE": {
+      "producer_source": "paired_reproduction/run_drive.py",
+      "producer_source_sha256": "7b0ff54e7eafacd037f47cf1dc4fbb21353b4c5d21303ca56d85b199ff706dfe",
+      "four_backend_assignment_ASTs_exactly_identical": true
+    },
+    "HRF": {
+      "producer_source": "paired_reproduction/run_hrf_baseline.py",
+      "producer_source_sha256": "ca7bb2b98c8a76f18c20cb582c7d3575309086040c6351a1a0e0073cfc47bb05",
+      "four_backend_assignment_ASTs_exactly_identical": true
+    }
+  },
+  "wrapper_science_AST_proof": {
+    "segflow": {
+      "all_existing_nonmain_function_ASTs_identical": true,
+      "functions": [
+        "stamp",
+        "sha",
+        "write_json",
+        "official_components",
+        "make_model",
+        "image_inputs",
+        "target_inputs",
+        "transport_inputs",
+        "probability_from_state",
+        "predict",
+        "load_data",
+        "_score",
+        "val_score",
+        "prepared_images",
+        "train_fit",
+        "evaluate_fit",
+        "_record_gating_amendment"
+      ]
+    },
+    "frunet": {
+      "all_existing_nonmain_function_ASTs_identical": true,
+      "functions": [
+        "official_components",
+        "make_model",
+        "image_inputs",
+        "_score",
+        "predict",
+        "validation_score",
+        "train_fit",
+        "evaluate_fit",
+        "_record_gating_amendment"
+      ]
+    }
+  },
+  "all_previous_portable_API_function_ASTs_unchanged": true,
+  "new_portable_API_function": "configure_backend_policy",
+  "vendor_and_executed_original_bytes_unchanged": true,
+  "synthetic_tests_passed": 15,
+  "backend_test_uses_mock_torch_no_CUDA_API": true,
+  "real_model_or_data_runs_performed": false,
+  "source_ZIP_audits_performed": false,
+  "numerical_or_binary_equivalence_relaxed": false,
+  "private_executed_training_validation_test_policy_already_matched": true,
+  "patch_filename": "public_backend_fix_2026-11-16_21-39-33.patch",
+  "patch_sha256": "24d5f6986d72cf6a1700592a2fbd0304d706c199105c8b297d11314ddeee0627",
+  "older_portable_run_adoption_rejected_by_existing_wrapper_hash_guard": true,
+  "tzdata_parent_fix_preserved": true
+}

@@ -1,7 +1,7 @@
 """Synthetic path/gate checks only: no retinal input, model run or CUDA work."""
 from pathlib import Path
 from types import SimpleNamespace
-import copy,json,os,subprocess,sys,tempfile,unittest
+import ast,copy,json,os,subprocess,sys,tempfile,unittest
 from unittest.mock import patch
 from official_comparisons import portable_api as api
 
@@ -48,6 +48,21 @@ class PortableTests(unittest.TestCase):
         env=dict(os.environ,PYTHONDONTWRITEBYTECODE='1')
         result=subprocess.run([sys.executable,'-c',code],cwd=PACKAGE,env=env,capture_output=True,text=True)
         self.assertEqual(result.returncode,0,result.stderr)
+
+    def test_backend_policy_sets_exact_inherited_flags_without_CUDA_API(self):
+        fake=SimpleNamespace(backends=SimpleNamespace(cudnn=SimpleNamespace(deterministic=False,benchmark=True,allow_tf32=True),cuda=SimpleNamespace(matmul=SimpleNamespace(allow_tf32=True))))
+        with patch.dict(sys.modules,torch=fake):policy=api.configure_backend_policy()
+        self.assertTrue(policy['cudnn_deterministic']);self.assertFalse(policy['cudnn_benchmark']);self.assertFalse(policy['cuda_matmul_allow_tf32']);self.assertFalse(policy['cudnn_allow_tf32'])
+        self.assertFalse(policy['strict_global_deterministic_algorithms_policy_modified'])
+
+    def test_backend_setup_precedes_official_model_loading_and_is_recorded(self):
+        for method in ['segflow','frunet']:
+            tree=ast.parse((PACKAGE/'official_comparisons'/f'{method}.py').read_text());main=next(n for n in tree.body if isinstance(n,ast.FunctionDef) and n.name=='main')
+            setup=[n for n in ast.walk(main) if isinstance(n,ast.Call) and isinstance(n.func,ast.Attribute) and n.func.attr=='configure_backend_policy']
+            loading=[n for n in ast.walk(main) if isinstance(n,ast.Call) and isinstance(n.func,ast.Name) and n.func.id=='official_components']
+            self.assertEqual(len(setup),1);self.assertTrue(loading);self.assertLess(setup[0].lineno,min(n.lineno for n in loading))
+            plans=[n for n in ast.walk(main) if isinstance(n,ast.Call) and isinstance(n.func,ast.Name) and n.func.id=='dict' and any(k.arg=='version' for k in n.keywords)]
+            self.assertTrue(any(any(k.arg=='backend_policy' for k in n.keywords) for n in plans))
 
     def test_paths_relocate_and_output_is_confined(self):
         with tempfile.TemporaryDirectory() as temp:

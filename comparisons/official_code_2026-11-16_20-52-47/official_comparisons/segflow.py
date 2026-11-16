@@ -292,11 +292,12 @@ def main():
     if (out/f'completed_training_evaluation_{tag}.json').is_file():print('Completed study exists; no files changed.');return
     out.mkdir(parents=True,exist_ok=True)
     import torch
+    backend_policy=portable.configure_backend_policy()
     if not torch.cuda.is_available():raise RuntimeError('CUDA required for final fits')
     torch.cuda.set_per_process_memory_fraction(args.memory_fraction);torch.set_num_threads(4);device='cuda'
     official=official_components(args.official_source)
     sources={str(x.relative_to(official.source)).replace('\\','/'):sha(x) for x in official.source.rglob('*.py')}
-    plan=dict(version=tag,portable_export=True,portable_input_manifest_sha256=portable.configuration().manifest_sha256,method='Official FMS2 SegFlow controlled-budget retinal adaptation',official_repository='https://github.com/BabakAsadi94/FMS2',official_commit=official.commit,license='MIT including upstream Tong CFM notices',source_sha256=sources,definitions=official.extracted,
+    plan=dict(version=tag,backend_policy=backend_policy,portable_export=True,portable_input_manifest_sha256=portable.configuration().manifest_sha256,method='Official FMS2 SegFlow controlled-budget retinal adaptation',official_repository='https://github.com/BabakAsadi94/FMS2',official_commit=official.commit,license='MIT including upstream Tong CFM notices',source_sha256=sources,definitions=official.extracted,
         datasets=DATASETS,training_seeds=SEEDS,pilot_seed=PILOT_SEED,learning_rate_candidates=LRS,epochs=args.epochs,logical_batch_size=4,microbatch_size=args.microbatch,GPU_memory_fraction_limit=args.memory_fraction,
         optimizer='Adam;weight_decay0',warmup_fraction=.05,EMA_decay=.99,time_sampling='Official Euler eleven-point cycle0,0.1,...,1',
         official_reference_schedule_NOT_executed=dict(updates=48002,learning_rate=1e-5,warmup_updates=10000,EMA_decay=.9999),
