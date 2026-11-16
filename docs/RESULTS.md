@@ -101,4 +101,10 @@ Each native tile uses one Direct velocity evaluation and no gate. Whole-grid Dir
 - [Protocol](EXPERIMENT_PROTOCOL.md): partitions, fitting, phase-specific locks, outcome definitions and uncertainty limits.
 - [Portability and required inputs](PORTABILITY.md): configuration, retained artifacts and executable entry points.
 
-The source-image/annotation versions, large weights and raw predictions are not redistributed in this code repository. Incomplete local DRIVE test-label acquisition and upstream HRF conversion provenance remain disclosed limitations.
+Large weights, model-output arrays and permitted CHASE/HRF inputs are provided through the separate [artifact release](ARTIFACT_DOWNLOADS.md), rather than a Git clone. DRIVE source RGB/GT/FOV are excluded and public HRF annotation JSONs omit personal labeler-login metadata. The [source-pixel audit summary](../results/public_provenance_summary_2026-11-16_20-18-50.json) distinguishes exact official HRF pixel correspondence under the stated white-only TIFF foreground rule from the unresolved DRIVE test-label acquisition. It does not claim recovery of the historical HRF converter.
+
+## Additional paired diagnostics
+
+The [CSV-only paired-analysis package](../analysis/paired_statistics_2026-11-16_19-39-49/README_2026-11-16_20-32-03.md) supplies every retained per-image raw Dice score and matched difference, unadjusted t intervals and two-sided paired t/exact signed-rank tests. Nine recipe-specific comparisons and nine baseline-secondary comparisons receive separate Holm corrections for each test type and each uncertainty unit. This additional analysis occurred after inspection of the outcomes and remains exploratory.
+
+O3-minus-Direct seed-level Holm t p-values are 0.001228, 0.004384 and 0.007145 for CHASE, DRIVE and HRF. Exact seed-level signed-rank p-values are 0.0625 before and 0.5625 after correction. With only five nonzero paired differences the exact two-sided test cannot attain 0.05. The CHASE patient-level O3-minus-Direct Holm t p-value is 0.096918; seed and cohort analyses quantify different variation. These are conditional diagnostics, not evidence for full-pipeline variability or a prospective superiority claim.

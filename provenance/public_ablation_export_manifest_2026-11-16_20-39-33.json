@@ -1,0 +1,36 @@
+{
+  "export_tag": "2026-11-16_20-39-33",
+  "scope": "Public portable code adaptation only; no fitting, evaluation, source-archive checks or scientific-array loading",
+  "original_source_sha256": {
+    "operations.py": "b70084c280ecf1658a503711efee1d75c9367b1b8513c6a449488d27fcac02a7",
+    "runner.py": "98fb29425394ff43f52d3c89a1828cfb75f0bcdf1315c42c9a23c06f25eb7bb0",
+    "specs.py": "ebbe3c61d18c261fe8efd7f2056c287dc28d697cd726302946ee12fff27f78c0",
+    "__init__.py": "55da7c588c732603f9c295cf57d7872503251e2d48fd06f2fbc4cc3851767333"
+  },
+  "original_test_sha256": "9d41ed232ea344f09b96805cdc052185764f4f297c564ef5e3f71cc2650536c1",
+  "registered_plan_sha256": "b33cea1c5ceee51c60b3d8551738951a8f8fa06c13589a2b83ec09136a427454",
+  "scientific_runner_function_AST_unchanged": {
+    "stamp": true,
+    "sha": true,
+    "write": true,
+    "read": true,
+    "image_dice": true,
+    "subject": true,
+    "prepare": true,
+    "create_views": true,
+    "train_one": true,
+    "verify_decision": true,
+    "evaluate_one": true
+  },
+  "original_operations_and_specs_byte_identical": true,
+  "path_only_changes": [
+    "ROOT is portable CODE_ROOT",
+    "protected_inventory uses configured artifacts/raw/code instead of private manuscript state",
+    "main requires configured output_root",
+    "Guarded CLI registers a new local run and configures paths before imports"
+  ],
+  "private_arrays_or_correspondence_included": false,
+  "results_included": false,
+  "active_original_sources_unchanged": true,
+  "execution_status": "Export prepared; active original240fit run is separate; do not claim completed new results"
+}

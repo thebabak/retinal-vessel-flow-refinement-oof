@@ -1,0 +1,29 @@
+{
+  "created_at": "2026-11-16_20-32-03",
+  "source_analysis_tag": "2026-11-16_19-39-49",
+  "copied_byte_identical": {
+    "source_CHASE_controls_2026-11-16_19-39-49.csv": "7813b75f2f35ca98b29d60bf29ab974d40dc65da30800c24e43617e9b061d4b1",
+    "source_CHASE_native_2026-11-16_19-39-49.csv": "656f78e425d98e2a9e4133182fd516932ec74560fb2b3f5b3d20563740273dc5",
+    "source_CHASE_objectives_2026-11-16_19-39-49.csv": "2ac5b638a0989a9ab3eacd11adc05e5a91bea9148743fc8042c4997957967da2",
+    "source_DRIVE_controls_2026-11-16_19-39-49.csv": "6030d46b2916cb2fa64d67f8b4479dba0ce58819ea8b8aac1010c5a4053de6a4",
+    "source_DRIVE_native_2026-11-16_19-39-49.csv": "15be1f1d5c959bf7e95b9bd8ebc4bb11f7394419f05994cd3fc85c25138d4fe6",
+    "source_DRIVE_objectives_2026-11-16_19-39-49.csv": "36867ed79341c768bebb103f6610698a7d018d46e4bdfa002900ba7779e17f61",
+    "source_HRF_controls_2026-11-16_19-39-49.csv": "4b16802bb0367b041c278b84c6943a60cf5f2aca14f2f07f6afd575b72f7cd85",
+    "source_HRF_native_2026-11-16_19-39-49.csv": "1cb8f7ab00129bb7d96d4be584c842b35e514546c45f00ac5366db04a6c9f670",
+    "source_HRF_objectives_2026-11-16_19-39-49.csv": "c8db3081d9de46ced3f421ea0b022d51c19dae257930173494774778b318fd15",
+    "analyze_paired_records_2026-11-16_19-39-49.py": "de25c19c1fba9a022261bd953be82f8f502bbd5a52b888c9dae1098172cbadc3",
+    "test_paired_statistics_2026-11-16_19-39-49.py": "c82fcddb23e84f5213fd7da7544cbaee37c51cf313447c65b0ff289198478364",
+    "per_image_dice_and_differences_2026-11-16_19-39-49.csv": "ef289ff33d7f3201ccd4622e3c79c888dcd043ca6c1689f1ad4e98076ed14280",
+    "raw_seed_means_2026-11-16_19-39-49.csv": "52c865861337c2e98650620981233d9f55cfa2e832c43a616615ac5032d8844f",
+    "raw_mean_SD_2026-11-16_19-39-49.csv": "67618ed194e4af3d61c0a69dc8a25f543965c27fd4643058e789287e2c61944e",
+    "paired_tests_2026-11-16_19-39-49.csv": "6e8cf265f831a01c37218a7f8b5654a78b7a68df94412c39c93e9aa545a37454",
+    "per_image_tables_2026-11-16_19-39-49.tex": "dcfa2329c0b0739e3ee53466d7159d0de9d67bb13866eff5c86536d81acc7451",
+    "paired_test_tables_2026-11-16_19-39-49.tex": "4f727b107aa44986dc584003ca0842bd79645a2d6c5074aad974858c2317734f",
+    "analysis_report_2026-11-16_19-39-49.md": "68345742e2ea80348ac430a083d2d62283fded0afd9da5388a951fc5d36d53a0",
+    "interpretation_constraints_2026-11-16_19-55-55.md": "ea715fb11bde30483abc32d2279448072bc83103b141d35c0e9aab39504dfeaa",
+    "public_analysis_plan_2026-11-16_20-32-03.json": "92edc266ffd4fd669556198fc1393d0bd5541e3d74893a2271c28d473783add4"
+  },
+  "source_photographs_or_annotations_included": false,
+  "private_correspondence_included": false,
+  "model_training_or_recalculation_in_this_export": false
+}

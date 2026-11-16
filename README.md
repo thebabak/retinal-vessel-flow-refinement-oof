@@ -35,6 +35,10 @@ O3 has the largest raw Dice point mean among the nine compared methods on these 
 
 See [results and interpretation](docs/RESULTS.md), the [experiment protocol](docs/EXPERIMENT_PROTOCOL.md), and the [saved tables](results/).
 
+The [additional paired-analysis package](analysis/paired_statistics_2026-11-16_19-39-49/README_2026-11-16_20-32-03.md) provides all 40 per-image Dice rows, matched differences, refiner-seed and patient/image diagnostics, and CSV-only analysis code. These post-hoc tests use explicitly separate Holm families and retain the fixed-baseline and prior-cohort-exposure limitations. They do not replace the saved bootstrap intervals.
+
+The separately registered [16-arm controlled-ablation implementation](docs/CONTROLLED_ABLATIONS_2026-11-16_20-39-33.md) is also available. Its new training/evaluation study is still in progress; the table above does not contain those pending outcomes. The public path adaptation preserves the executed scientific functions and requires explicit configuration, registration and successful historical-input preflight before execution.
+
 ## Scope and reproducibility
 
 - Training coarse maps are retained out-of-fold (OOF) predictions; validation/test maps come from the frozen full-training baseline, seed 42.
@@ -94,7 +98,7 @@ python -m flow_matching_refiner.portable_cli --config configs/paths.local.json -
 
 Without `--execute`, this performs standard-library path/hash preflight only. It does not train, load image pixels, evaluate predictions or recalculate scores. Supported phases are `objectives`, `native`, `controls` and `report`; real execution requires explicitly adding `--execute` after the preflight succeeds. Configure a complete retained-artifact archive, separate output directory and raw dataset roots. Original source snapshots are required for historical hash checks; adapted public code is not a substitute for those snapshots.
 
-Missing real inputs must cause an explicit failure; no replacement dataset or automatic training substitute is supplied. Obtain source datasets through their providers and follow their terms. Local DRIVE test-label acquisition and the upstream HRF annotation conversion remain incompletely documented; exact internal replay does not independently resolve that source limitation.
+Missing real inputs must cause an explicit failure; no replacement dataset or automatic training substitute is supplied. Obtain source datasets through their providers and follow their terms. A subsequent official HRF source-pixel audit reconstructs all 45 retained native and comparison-grid vessel targets by treating TIFF luminance 255 as foreground; the historical converter itself has not been recovered. DRIVE images and training annotations were obtained from the [Kaggle repository provided by the authors](https://www.kaggle.com/datasets/andrewmvd/drive-digital-retinal-images-for-vessel-extraction). Test evaluation uses retained local manual-1 PNG annotations; their acquisition history is not independently established. Exact internal replay does not resolve that source limitation.
 
 Repository preparation did not retrain models or recompute the saved experimental metrics or confidence intervals. New path/command adapters are documented separately from the executed study sources.
 

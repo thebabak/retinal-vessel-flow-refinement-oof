@@ -1,0 +1,166 @@
+{
+  "registered_at": "2026-11-16T19:39:50.033563+03:30",
+  "tag": "2026-11-16_19-39-49",
+  "status": "registered_before_statistical_computation",
+  "scope": "New exploratory conditional paired statistics and explicit per-image tables from nine unchanged stored CSV sources only.",
+  "datasets": [
+    {
+      "name": "CHASE",
+      "expected_images": 8,
+      "unit": "two-eye subject",
+      "sources": [
+        {
+          "role": "controls",
+          "path": "source_CHASE_controls_2026-11-16_19-39-49.csv",
+          "sha256": "7813b75f2f35ca98b29d60bf29ab974d40dc65da30800c24e43617e9b061d4b1",
+          "arms": {
+            "direct": "Direct",
+            "esfm": "ESFM"
+          }
+        },
+        {
+          "role": "objectives",
+          "path": "source_CHASE_objectives_2026-11-16_19-39-49.csv",
+          "sha256": "2ac5b638a0989a9ab3eacd11adc05e5a91bea9148743fc8042c4997957967da2",
+          "arms": {
+            "direct_thin_anchor": "O1",
+            "esfm_endpoint_anchor": "O2"
+          }
+        },
+        {
+          "role": "native",
+          "path": "source_CHASE_native_2026-11-16_19-39-49.csv",
+          "sha256": "656f78e425d98e2a9e4133182fd516932ec74560fb2b3f5b3d20563740273dc5",
+          "arms": {
+            "native_patch_direct": "O3"
+          }
+        }
+      ]
+    },
+    {
+      "name": "DRIVE",
+      "expected_images": 20,
+      "unit": "image (patient independence unverified)",
+      "sources": [
+        {
+          "role": "controls",
+          "path": "source_DRIVE_controls_2026-11-16_19-39-49.csv",
+          "sha256": "6030d46b2916cb2fa64d67f8b4479dba0ce58819ea8b8aac1010c5a4053de6a4",
+          "arms": {
+            "direct": "Direct",
+            "esfm": "ESFM"
+          }
+        },
+        {
+          "role": "objectives",
+          "path": "source_DRIVE_objectives_2026-11-16_19-39-49.csv",
+          "sha256": "36867ed79341c768bebb103f6610698a7d018d46e4bdfa002900ba7779e17f61",
+          "arms": {
+            "direct_thin_anchor": "O1",
+            "esfm_endpoint_anchor": "O2"
+          }
+        },
+        {
+          "role": "native",
+          "path": "source_DRIVE_native_2026-11-16_19-39-49.csv",
+          "sha256": "15be1f1d5c959bf7e95b9bd8ebc4bb11f7394419f05994cd3fc85c25138d4fe6",
+          "arms": {
+            "native_patch_direct": "O3"
+          }
+        }
+      ]
+    },
+    {
+      "name": "HRF",
+      "expected_images": 12,
+      "unit": "image (patient independence unverified)",
+      "sources": [
+        {
+          "role": "controls",
+          "path": "source_HRF_controls_2026-11-16_19-39-49.csv",
+          "sha256": "4b16802bb0367b041c278b84c6943a60cf5f2aca14f2f07f6afd575b72f7cd85",
+          "arms": {
+            "direct": "Direct",
+            "esfm": "ESFM"
+          }
+        },
+        {
+          "role": "objectives",
+          "path": "source_HRF_objectives_2026-11-16_19-39-49.csv",
+          "sha256": "c8db3081d9de46ced3f421ea0b022d51c19dae257930173494774778b318fd15",
+          "arms": {
+            "direct_thin_anchor": "O1",
+            "esfm_endpoint_anchor": "O2"
+          }
+        },
+        {
+          "role": "native",
+          "path": "source_HRF_native_2026-11-16_19-39-49.csv",
+          "sha256": "1cb8f7ab00129bb7d96d4be584c842b35e514546c45f00ac5366db04a6c9f670",
+          "arms": {
+            "native_patch_direct": "O3"
+          }
+        }
+      ]
+    }
+  ],
+  "seeds": [
+    42,
+    123,
+    2026,
+    3000,
+    3001
+  ],
+  "contrasts": [
+    {
+      "id": "O1_minus_Direct",
+      "left": "O1",
+      "right": "Direct",
+      "family": "primary"
+    },
+    {
+      "id": "O2_minus_ESFM",
+      "left": "O2",
+      "right": "ESFM",
+      "family": "primary"
+    },
+    {
+      "id": "O3_minus_Direct",
+      "left": "O3",
+      "right": "Direct",
+      "family": "primary"
+    },
+    {
+      "id": "O1_minus_Baseline",
+      "left": "O1",
+      "right": "Baseline",
+      "family": "baseline_secondary"
+    },
+    {
+      "id": "O2_minus_Baseline",
+      "left": "O2",
+      "right": "Baseline",
+      "family": "baseline_secondary"
+    },
+    {
+      "id": "O3_minus_Baseline",
+      "left": "O3",
+      "right": "Baseline",
+      "family": "baseline_secondary"
+    }
+  ],
+  "output": ".",
+  "policies": {
+    "primary": "Raw learned outputs only. Blended outputs excluded.",
+    "seed_level": "Five refiner-training means, matched by seed for learned controls; one shared baseline is repeated only as deterministic paired reference, not as five fitted baselines.",
+    "unit_sensitivity": "Average all five fitted outputs within each image, then average the two eyes within each CHASE subject. DRIVE/HRF image units; patient independence unverified.",
+    "t": "Two-sided paired t statistic on difference vector; sample SD, df=n-1, two-sided 95% t interval. Conditional independence/normality assumptions and tiny seed n apply.",
+    "wilcoxon": "Two-sided exact signed-rank sign-enumeration distribution; zeros dropped (wilcox), average ranks for ties, dynamic programming over doubled integer ranks. No asymptotic fallback.",
+    "holm": "For each of seed-level and patient/image-level analyses, and separately for t and Wilcoxon: primary family has 9 tests (3 predeclared recipe comparisons x 3 datasets); secondary baseline family has 9 tests (O1/O2/O3 versus baseline x 3 datasets). The two families are separate, not overall18 FWER control.",
+    "undefined_t": "Zero variance: t/p unavailable; use p=1 as conservative placeholder for correction of the other eight tests; mark unavailable cell. Exact signed-rank p=1 if all differences zero.",
+    "existing_intervals": "Previously reported unadjusted bootstrap intervals are not recomputed or replaced; new t intervals identify a different uncertainty unit.",
+    "no_claim": "No new raw-array loading, prediction evaluation, training, confirmatory superiority, equivalence, baseline variability or external-population claim. Outcome inspection predates this completion plan."
+  },
+  "public_derivative_of_original_plan_sha256": "0ad7f65416d6243c65023f0ea4ed7e5e2bd007d2f514a87b4841217ce71b6439",
+  "public_derivative_note": "Machine-specific original_path fields omitted; source CSV bytes, arm mappings, policies and contrasts unchanged."
+}
