@@ -1,0 +1,21 @@
+{
+  "created_at": "2026-11-16_19-03-43",
+  "scope": "Artifact packaging/download/installation verification only; no scientific evaluation.",
+  "synthetic_artifact_tests": 16,
+  "synthetic_artifact_tests_passed": true,
+  "real_zip_inventory_checks_passed": true,
+  "installation": {
+    "published_files_verified": 3513,
+    "training_or_evaluation_performed": false,
+    "generated_local_config": "F:\\PHD\\AI in Med\\paper3\\outputs\\github_flow_artifacts_2026-11-16_18-53-15\\installed_validation_2026-11-16_19-03-43\\paths.downloaded_2026-11-16_18-53-15.local.json"
+  },
+  "installed_file_verification": {
+    "published_files_verified": 3513,
+    "training_or_evaluation_performed": false
+  },
+  "model_or_metric_evaluation": false,
+  "source_sha256": {
+    "tools/fetch_artifacts.py": "11a3e815f71f23b5c2e663e897c1c9a33cc8e1d74dcf7745bce914ed6db51e1f",
+    "tests/test_fetch_artifacts.py": "642a2999f48c861822339cc5c3dc7c838dc7b424a93079f41caccfbc82b3ef54"
+  }
+}

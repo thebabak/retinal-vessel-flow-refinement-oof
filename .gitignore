@@ -27,6 +27,7 @@ Thumbs.db
 /datasets/
 /raw_data/
 /artifacts/
+/.artifact-download-cache/
 /runtime/
 /runs/
 /outputs/

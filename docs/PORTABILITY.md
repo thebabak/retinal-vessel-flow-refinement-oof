@@ -4,7 +4,7 @@ This public copy keeps the executed scientific recipes and adds path isolation, 
 
 ## Scope
 
-A clone supports reading the small result tables and running the synthetic software tests. Full computational replay additionally requires the exact retained baseline/OOF/control archives and raw annotation versions described below. They are not downloaded or manufactured by the adapter. There is no dummy dataset, automatic checkpoint training fallback, hash bypass or substitute result source.
+A clone supports reading the small result tables and running the synthetic software tests. A separate [artifact downloader](ARTIFACT_DOWNLOADS.md) fetches the permitted retained release files and verifies their public digests. DRIVE source fields are omitted and public HRF annotation metadata is privacy-redacted; these copies alone do not satisfy all original-byte historical bindings. Full computational replay additionally requires every exact retained baseline/OOF/control archive and original annotation version described below. They are not manufactured by the adapter. There is no dummy dataset, automatic checkpoint training fallback, hash bypass or substitute result source.
 
 The canonical entry point is:
 

@@ -1,0 +1,11 @@
+{
+  "created_at": "2026-11-16T19:00:54.586302+03:30",
+  "scope": "stdlib synthetic downloader/archive tests only; no real data/model/metric evaluation",
+  "tests_run": 16,
+  "all_passed": true,
+  "SHA256": {
+    "ARTIFACT_DOWNLOADS.md": "49a908ddeaac052a698b759d2849c4e03bfe28225b9bd6ed8da3e5ec1a85284a",
+    "fetch_artifacts.py": "ac22fc4abed6e166840ffc5df6f10023806f38f7c1af935850834cc916029753",
+    "test_fetch_artifacts.py": "642a2999f48c861822339cc5c3dc7c838dc7b424a93079f41caccfbc82b3ef54"
+  }
+}

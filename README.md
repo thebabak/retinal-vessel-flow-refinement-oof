@@ -43,7 +43,15 @@ See [results and interpretation](docs/RESULTS.md), the [experiment protocol](doc
 - Every reported comparison uses the original **512 × 512 GT/FOV fields**. Native coarse inputs are bilinear projections of existing 512-grid predictions. Only the learned native residual is projected back and applied to the original coarse map. No native-grid segmentation metric is claimed.
 - Confidence intervals are exploratory, unadjusted and conditional on the fitted models. The evaluation cohorts had already been examined, and independent patient IDs are unverified for DRIVE and HRF.
 
-The repository includes the three-option implementation, required earlier-control and OOF producer dependencies, software tests and small numerical tables. Large model weights, prediction arrays and source images/annotations are excluded. Private correspondence and manuscript submission files are excluded.
+The repository includes the three-option implementation, required earlier-control and OOF producer dependencies, software tests and numerical tables. Retained model weights, OOF probability maps, predictions, protocol/source records and licensed CHASE/HRF data are downloadable from the [research-artifact release](https://github.com/thebabak/retinal-vessel-flow-refinement-oof/releases/tag/artifacts-2026-11-16_18-53-15). Private correspondence and manuscript submission files are excluded.
+
+Read [artifact downloads and integrity checks](docs/ARTIFACT_DOWNLOADS.md) and [data attribution and access boundaries](docs/DATA_LICENSES.md). DRIVE source RGB/GT/FOV are excluded because redistribution permission is unavailable; DRIVE prediction-only exports retain model outputs and omit source fields. HRF public annotation JSONs remove third-party labeler-login metadata while preserving bitmap payloads. Those privacy derivatives have distinct hashes. **The public downloads do not satisfy the complete original-byte historical preflight by themselves:** original licensed DRIVE containers and original HRF annotation metadata remain required by that strict check. No hash bypass or fresh experimental reproduction is claimed.
+
+Inspect the published artifact inventory without downloading or evaluating a model:
+
+```bash
+python -S -m tools.fetch_artifacts
+```
 
 Display saved values using the Python standard library, without installing training packages:
 
@@ -76,7 +84,7 @@ python -m unittest discover -s tests -p "test_*.py"
 
 ### Required research inputs
 
-Cloning the repository and installing packages is sufficient to inspect tables and run the software tests. Full computational replay additionally requires the exact dataset/annotation versions, retained split/protocol files, seed-42 full/fold baseline checkpoints, OOF maps and the other matched artifacts expected by the reference adapters. Checking old result summaries against predictions also requires their original model/prediction archives. These artifacts are not supplied by a clone.
+Cloning the repository and installing packages is sufficient to inspect tables and run the software tests. The separate release supplies the permitted retained artifacts described above; these large assets are not part of a Git clone. Full computational replay additionally requires every exact dataset/annotation version and original hash-bound container expected by the reference adapters, including the omitted DRIVE inputs and original HRF annotation metadata. Download verification checks the published copies; it is distinct from the stricter historical input preflight.
 
 See [portable configuration and commands](docs/PORTABILITY.md) before launching an experiment. Create a private local configuration, for example `configs/paths.local.json`, using its documented schema:
 
