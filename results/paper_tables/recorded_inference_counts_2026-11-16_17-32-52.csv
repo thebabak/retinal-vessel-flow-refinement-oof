@@ -1,0 +1,4 @@
+dataset,image,refiner_seed,native_height,native_width,tile,stride,batch,logical_tile_calls,batched_forward_calls,gate_calls,latency_measured
+CHASE-DB1,Image_02L,42,960,999,256,128,16,49,4,0,False
+DRIVE,01_test,42,584,565,256,128,16,16,1,0,False
+HRF,01_g,42,2336,3504,256,128,16,486,31,0,False

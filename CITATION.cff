@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+type: software
+message: "Please cite this software repository when using its code or saved numerical tables. The associated manuscript is currently unpublished."
+title: "Retinal Vessel Flow Refinement with OOF Inputs"
+authors:
+  - family-names: Bayanian
+    given-names: Babak
+  - family-names: Naderi
+    given-names: Hanieh
+  - family-names: Dinesh
+    given-names: Chinthaka
+date-released: "2026-11-16"
+url: "https://github.com/thebabak/retinal-vessel-flow-refinement-oof"
+repository-code: "https://github.com/thebabak/retinal-vessel-flow-refinement-oof"
+abstract: >-
+  Research implementation and saved numerical tables for three separately
+  evaluated retinal-vessel refinement recipes using retained out-of-fold
+  coarse maps: Direct refinement with thin recovery and anchoring,
+  error-selective flow matching with full local endpoint supervision and
+  anchoring, and native-input patch Direct refinement. The associated
+  manuscript, Structural Objectives and Native-Resolution Patches for Direct
+  and Flow-Matching Retinal Vessel Refinement, by Babak Bayanian,
+  Hanieh Naderi and Chinthaka Dinesh is unpublished. No manuscript DOI is
+  asserted.
+keywords:
+  - retinal vessel segmentation
+  - flow matching
+  - out-of-fold predictions
+  - native-resolution patches
+  - reproducibility

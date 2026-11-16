@@ -1,0 +1,92 @@
+{
+  "created_at": "2026-11-16T18:33:34.806053+03:30",
+  "scope": "Public-copy dependency and source-composer software verification only.",
+  "legacy_helper_imports": {
+    "paired_reproduction.official_model": "paired_reproduction\\official_model.py",
+    "paired_reproduction.run_all_datasets_five_full_runs": "paired_reproduction\\run_all_datasets_five_full_runs.py",
+    "paired_reproduction.run_component_ablations": "paired_reproduction\\run_component_ablations.py",
+    "paired_reproduction.run_oof_comparison": "paired_reproduction\\run_oof_comparison.py",
+    "paired_reproduction.report_all_datasets_full_runs": "paired_reproduction\\report_all_datasets_full_runs.py"
+  },
+  "legacy_three_dataset_source_composition": {
+    "CHASE": {
+      "producer_source": "paired_reproduction\\run.py",
+      "prefix_syntax_passed": true,
+      "training_source_syntax_passed": true,
+      "executed": false
+    },
+    "DRIVE": {
+      "producer_source": "paired_reproduction\\run_drive.py",
+      "prefix_syntax_passed": true,
+      "training_source_syntax_passed": true,
+      "executed": false
+    },
+    "HRF": {
+      "producer_source": "paired_reproduction\\run_hrf_baseline.py",
+      "prefix_syntax_passed": true,
+      "training_source_syntax_passed": true,
+      "executed": false
+    }
+  },
+  "external_runtime_imports_passed": [
+    "torch",
+    "torchvision",
+    "cv2",
+    "numpy",
+    "scipy",
+    "PIL",
+    "skimage",
+    "matplotlib"
+  ],
+  "cuda_initialized": false,
+  "no_legacy_driver_execution": true,
+  "no_real_dataset_checkpoint_or_result_load": true,
+  "no_training_or_experimental_evaluation": true,
+  "no_git_or_github_mutations": true,
+  "source_sha256": {
+    "diffusion_refiner\\models.py": "70bd254d9231bd8a2ac61bc66e60771f5b664c396ee64a95c65a1fe7544b47f6",
+    "diffusion_refiner\\utils.py": "96e0a02cc6280cc9484383bb05beef61e4150cf77d66f8491ff7ce6cc3d3d5a6",
+    "diffusion_refiner\\__init__.py": "155c0c911d7689eaf87992ffa7f1af9bc9be03ce9d1a4f88a1cfc285c01c47a2",
+    "flow_matching_refiner\\data.py": "30e1c43869be68b6ac004eeb91c78b652661ebc4bf1fd06fa7c6be0daa14edc5",
+    "flow_matching_refiner\\esfm_model.py": "7f46c01629e0a9696aab65f3d6f6af1d2cc27b53f549abdd97200106c2496190",
+    "flow_matching_refiner\\esfm_objective_all.py": "a0f3c2b7ef88fa63e12c247e99b4b4a5d9fec702b7cae460de0c950599c11750",
+    "flow_matching_refiner\\model.py": "d00379328ac49e21121f7c6ea99a5214d40b810adc2d2961c05f92f3a285e1dd",
+    "flow_matching_refiner\\native_patch_data.py": "2bd319b1c42d495158e5c4888e7861b77d2a3fe30fc434e07d526075cf1ce11b",
+    "flow_matching_refiner\\native_patch_model.py": "59eee41da32c6275fe5b9bda3f19613b47d2ff419d4da307fe09b1eae68f662b",
+    "flow_matching_refiner\\oof_data.py": "63b734a730b477fbadd45b80b4c8ad69b1f59253ac893993afc366ca42ccef34",
+    "flow_matching_refiner\\oof_data_all.py": "de891cc14c159f2a85c62d7d07f19bda7644bf50323044bd2a2346ff60bf3d34",
+    "flow_matching_refiner\\pixel_model.py": "8876fb5ded8c1bef6c020a9649c75a1e17ec135c977c44163f02dc609bb4fa87",
+    "flow_matching_refiner\\portable_paths.py": "dbb947e893fb40a1901e6fe68aef80e8b22ec4df2a60964d29692344dbce76d6",
+    "flow_matching_refiner\\refinement_objectives_v3.py": "c95254df17b9e8242c99d399d55530cff960ec7706e818144a35c3417c2f3797",
+    "flow_matching_refiner\\report_esfm_all.py": "f9b0da7e2133be93c42e2a3221978d8bc98e459df4ae0f668179f7600ad7b80b",
+    "flow_matching_refiner\\report_esfm_oof.py": "646d52e80f59d27ee5d97c8d8e13d0bdbe45cd4125b4360669ef0585971216d1",
+    "flow_matching_refiner\\report_native_patch.py": "3a6df5b1d0fa4c24e4caf5d2659451bd85a8b3dc724dec3baeaba6e61c72b2dc",
+    "flow_matching_refiner\\report_refinement_v3.py": "c3d8c75250d3b0fbe52590d541f9930581ff8068f2a9c8fc2ce94e7fbd08d134",
+    "flow_matching_refiner\\run.py": "91e212be4435fa281a048fca7bd4c2ec85942f82f76709759b3ef85d251f5ebf",
+    "flow_matching_refiner\\run_esfm_all.py": "7d0da95838923bc7d3e095a19164e3f90fdda35b6ad042ed6196c564919af6d3",
+    "flow_matching_refiner\\run_esfm_oof.py": "fd8840791516951d7cc379642c70150ef1b98a97cbd7beb063127152f02ce356",
+    "flow_matching_refiner\\run_native_patch.py": "6e20c13acbf6e97a3012b895a9ae734616f743f17c5cb2c7dd0fcb8edce9131f",
+    "flow_matching_refiner\\run_pixel.py": "435884c160de8803032445cd73e40d4e3c0c606670d2212585a44b74df7d2469",
+    "flow_matching_refiner\\run_refinement_v3.py": "0e15b4a3b0adfb9b53488472d965f787e5bd2b34ea8e066bc88c2ebf92f1454b",
+    "flow_matching_refiner\\structure_metrics.py": "2d68e695b009313e93d001d7467435ba072cd64b48ee55f84fa20124cf0bfab2",
+    "flow_matching_refiner\\structure_metrics_all.py": "89c5bcd7b6d4da1fd859ae099ef5571e9f66362597a372e67097dce8693a4051",
+    "flow_matching_refiner\\test_esfm_model.py": "7968cf279f60c3c8589e353d6857241651acd4ac4ac9a42aa9f072d4ccfaa10e",
+    "flow_matching_refiner\\test_model.py": "aec96d7329088ad9f7b1e740e8d77f54eb0c995afd6fab4b33242aa14e82a7c7",
+    "flow_matching_refiner\\test_native_patch_data.py": "904e973a1e6f1d932b89e19be19a88cb8fccf5d60ed3ca524e0bbecc0f24b52f",
+    "flow_matching_refiner\\test_native_patch_model.py": "a961ac51138b94e8a4245547de7412ce16806b1b59494b7cf3bbf2d4e0d8d15b",
+    "flow_matching_refiner\\test_oof_data_all.py": "34371f55889e573a3ce2c9542762d21e79abb9ecfef2dccddc3cf2da627d3ecd",
+    "flow_matching_refiner\\test_pixel_model.py": "504ae4648b77032d9554bffe75f024918a18468a000f5a3be1f86751dc16e864",
+    "flow_matching_refiner\\test_refinement_objectives_v3.py": "1ba47dce0966d43a337dc92f42402d75001bd3fb9fba6a02843880344499a04e",
+    "flow_matching_refiner\\test_structure_metrics.py": "a674e0159f9a0cac3f8a0ff12c141f32211c6c637cc4a7555f14b0fd1b330321",
+    "flow_matching_refiner\\__init__.py": "b97497bed2b11988c5d120d99c71557ab61a22b6f8a7c88a97f8039e9c5b1c30",
+    "paired_reproduction\\official_model.py": "881a7d330af9aa4d8e0b87cdd326bd174f2a180878ae89ec9e5e75205d25ce9a",
+    "paired_reproduction\\report_all_datasets_full_runs.py": "fb0131d4e180b27f235752010578b39b0c303205d471154423ab2635389c94ff",
+    "paired_reproduction\\run.py": "08a986392ddd329ea36e878ff954564e207319ea9dc86dd9b3c85abd7a551a7c",
+    "paired_reproduction\\run_all_datasets_five_full_runs.py": "f7886c4e03d5aea8fb85434501e808f5174b4e099bf6db6fb6444840e14cd291",
+    "paired_reproduction\\run_component_ablations.py": "e03480fb594a8ecc3237905b70dbfe7f5ef0d99347ec340e1c9f534aae4ad427",
+    "paired_reproduction\\run_drive.py": "7b0ff54e7eafacd037f47cf1dc4fbb21353b4c5d21303ca56d85b199ff706dfe",
+    "paired_reproduction\\run_hrf_baseline.py": "ca7bb2b98c8a76f18c20cb582c7d3575309086040c6351a1a0e0073cfc47bb05",
+    "paired_reproduction\\run_oof_comparison.py": "3d219508bffa003b1a4e3469b592655eaef9e52c491d6d7362e48986ab7aa363",
+    "tools\\show_results.py": "964ecabb31b31334216d3114d3c5c70d0ad43f9960ba5a5bbfb272155548bd1b"
+  }
+}

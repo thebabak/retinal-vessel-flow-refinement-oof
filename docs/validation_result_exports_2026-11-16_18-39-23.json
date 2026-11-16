@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-11-16T18:39:23.315391+03:30",
+  "all_six_CSV_exports_byte_identical": true,
+  "all_public_means_SDs_seed_means_exactly_copied": true,
+  "no_metrics_or_statistics_recomputed": true,
+  "CSV_sha256": {
+    "results/paper_tables/all_raw_scores_2026-11-16_17-32-52.csv": "d1226a6f57978bfec4b4b289f1cf9e065f6484afa02474fad8e505eba9e962de",
+    "results/paper_tables/new_options_blends_2026-11-16_17-32-52.csv": "7fd347b7e9670f99409d7022614116471fee724656e399dd3bca8f14733ffa54",
+    "results/paper_tables/new_options_checkpoint_choices_2026-11-16_17-32-52.csv": "e014fe761b5049f16eece4284e06a9486259fcfea87512b51845e3e5210bb1e8",
+    "results/paper_tables/new_options_seed_means_2026-11-16_17-32-52.csv": "b4cd4b585610111d8293c0f196a35ebbc0d0807a8eec5d26a28085580c27e4a8",
+    "results/paper_tables/planned_raw_contrasts_2026-11-16_17-32-52.csv": "3686ee647730f1020acb4fca9e171b0ef6c92b9d38dc465a4a459d24037f1586",
+    "results/paper_tables/recorded_inference_counts_2026-11-16_17-32-52.csv": "5f4728f21e4a2402213c00db837fa9dbca57451a2b4d849d6c5f0cfa0c8d852f"
+  },
+  "public_results_sha256": "496f85d59e1e98a9f3a865941aeca10c65ca887bc97891821e17711e54a84978"
+}

@@ -1,0 +1,4 @@
+-r requirements.txt
+
+# The included synthetic checks use unittest, tempfile, subprocess and
+# py_compile from Python's standard library. No pytest dependency is needed.

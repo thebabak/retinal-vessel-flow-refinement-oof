@@ -1,0 +1,3 @@
+# Preserve source and saved-table bytes for the recorded SHA256 bindings.
+* -text
+*.py diff=python

@@ -1,0 +1,82 @@
+# Python environments and caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local configuration and editor files
+.env
+.env.*
+!.env.example
+*.local.json
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.tmp
+*~
+
+# Research inputs and runtime output directories
+/data/
+/datasets/
+/raw_data/
+/artifacts/
+/runtime/
+/runs/
+/outputs/
+/tmp/
+/revise/
+/archive/
+**/loader_workspace/
+**/input_audit/
+**/native_references/
+
+# Model weights and raw array archives
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.npz
+*.npy
+
+# Dataset images, manuscript files and private packages
+*.png
+*.jpg
+*.jpeg
+*.tif
+*.tiff
+*.gif
+*.bmp
+*.pdf
+*.tex
+*.zip
+*.7z
+*.tar
+*.tar.gz
+*.gz
+/manuscript/
+/reviewer_comments/
+/correspondence/
+
+# Logs and private runtime inventories that can contain local paths
+*.log
+*.out
+*.err
+**/status*.json
+**/file_provenance*.json
+**/environment_*.json
+**/all_sources_protected_*.json
+**/protected_before_*.json
+**/protected_after_*.json
+**/protected_previous_files_*.json
+**/*_OOF_source_audit_*.json
+**/*_native_input_audit_*.json
+
+# Sanitized published results/configuration remain tracked.
+# Do not add blanket CSV or JSON exclusions.

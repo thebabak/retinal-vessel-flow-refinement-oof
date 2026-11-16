@@ -1,0 +1,18 @@
+{
+  "artifact_root": "../artifacts",
+  "output_root": "../runs",
+  "raw_roots": {
+    "CHASE": "raw/CHASE",
+    "DRIVE": "raw/DRIVE",
+    "DRIVE_TEST_GT": "raw/DRIVE_TEST_GT",
+    "HRF": "raw/HRF"
+  },
+  "recorded_path_aliases": {
+    "/recorded/study": ".",
+    "/recorded/study/flow_matching_refiner": "source_snapshots/flow_matching_refiner",
+    "/recorded/raw/CHASE": "raw/CHASE",
+    "/recorded/raw/DRIVE": "raw/DRIVE",
+    "/recorded/raw/DRIVE_TEST_GT": "raw/DRIVE_TEST_GT",
+    "/recorded/raw/HRF": "raw/HRF"
+  }
+}
