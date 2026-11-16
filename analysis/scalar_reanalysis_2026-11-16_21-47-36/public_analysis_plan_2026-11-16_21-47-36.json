@@ -1,0 +1,213 @@
+{
+  "datasets": [
+    "CHASE",
+    "DRIVE",
+    "HRF"
+  ],
+  "seeds": [
+    42,
+    123,
+    2026,
+    3000,
+    3001
+  ],
+  "ablation_contrasts": [
+    {
+      "id": "thin_minus_Direct",
+      "coefficients": {
+        "thin": 1,
+        "Direct": -1
+      }
+    },
+    {
+      "id": "anchor_minus_Direct",
+      "coefficients": {
+        "anchor": 1,
+        "Direct": -1
+      }
+    },
+    {
+      "id": "endpoint_minus_ESFM",
+      "coefficients": {
+        "endpoint": 1,
+        "ESFM": -1
+      }
+    },
+    {
+      "id": "O2anchor_minus_ESFM",
+      "coefficients": {
+        "O2anchor": 1,
+        "ESFM": -1
+      }
+    },
+    {
+      "id": "Dice025_minus_Dice0",
+      "coefficients": {
+        "Dice025": 1,
+        "Dice0": -1
+      }
+    },
+    {
+      "id": "Dice05_Direct_minus_Dice0",
+      "coefficients": {
+        "Direct": 1,
+        "Dice0": -1
+      }
+    },
+    {
+      "id": "Dice1_minus_Dice0",
+      "coefficients": {
+        "Dice1": 1,
+        "Dice0": -1
+      }
+    },
+    {
+      "id": "Direct_noRGB_minus_Direct",
+      "coefficients": {
+        "Direct_noRGB": 1,
+        "Direct": -1
+      }
+    },
+    {
+      "id": "Direct_noaug_minus_Direct",
+      "coefficients": {
+        "Direct_noaug": 1,
+        "Direct": -1
+      }
+    },
+    {
+      "id": "O2_noRGB_minus_O2",
+      "coefficients": {
+        "O2_noRGB": 1,
+        "O2": -1
+      }
+    },
+    {
+      "id": "patch512_minus_O3",
+      "coefficients": {
+        "patch512": 1,
+        "O3": -1
+      }
+    },
+    {
+      "id": "native_uniform_minus_O3",
+      "coefficients": {
+        "native_uniform": 1,
+        "O3": -1
+      }
+    },
+    {
+      "id": "native_noaug_minus_O3",
+      "coefficients": {
+        "native_noaug": 1,
+        "O3": -1
+      }
+    },
+    {
+      "id": "degradedRGB_minus_O3",
+      "coefficients": {
+        "degradedRGB": 1,
+        "O3": -1
+      }
+    },
+    {
+      "id": "degradedGT_minus_O3",
+      "coefficients": {
+        "degradedGT": 1,
+        "O3": -1
+      }
+    },
+    {
+      "id": "degradedBoth_minus_O3",
+      "coefficients": {
+        "degradedBoth": 1,
+        "O3": -1
+      }
+    },
+    {
+      "id": "O1_interaction",
+      "coefficients": {
+        "O1": 1,
+        "thin": -1,
+        "anchor": -1,
+        "Direct": 1
+      }
+    },
+    {
+      "id": "O2_interaction",
+      "coefficients": {
+        "O2": 1,
+        "endpoint": -1,
+        "O2anchor": -1,
+        "ESFM": 1
+      }
+    },
+    {
+      "id": "native_information_interaction",
+      "coefficients": {
+        "O3": 1,
+        "degradedRGB": -1,
+        "degradedGT": -1,
+        "degradedBoth": 1
+      }
+    }
+  ],
+  "external_contrasts": [
+    {
+      "id": "SegFlow_minus_Baseline",
+      "coefficients": {
+        "SegFlow": 1,
+        "Baseline": -1
+      }
+    },
+    {
+      "id": "SegFlow_minus_ESFM",
+      "coefficients": {
+        "SegFlow": 1,
+        "ESFM": -1
+      }
+    },
+    {
+      "id": "SegFlow_minus_O3",
+      "coefficients": {
+        "SegFlow": 1,
+        "O3": -1
+      }
+    },
+    {
+      "id": "FR_minus_Baseline",
+      "coefficients": {
+        "FR": 1,
+        "Baseline": -1
+      }
+    },
+    {
+      "id": "FR_minus_O3",
+      "coefficients": {
+        "FR": 1,
+        "O3": -1
+      }
+    }
+  ],
+  "families": {
+    "ablation_primary_Dice": {
+      "contrasts_per_dataset": 19,
+      "datasets": 3,
+      "size": 57
+    },
+    "external_primary_Dice": {
+      "contrasts_per_dataset": 5,
+      "datasets": 3,
+      "size": 15
+    }
+  },
+  "schema_version": 1,
+  "source_private_plan_sha256": "8d7f59be0854cd542ec967c767dbdff64401af32a44e99b44f5ca3a8b9994723",
+  "original_registered_plan_sha256": "3a415793abee8e7cb84a6f98d1a997f9ff76f096e377ecdbbb6800a758eef939",
+  "scope": "Post-hoc exploratory numerical table reanalysis only. Private administration and machine paths are omitted.",
+  "averaging": "Average individual metric scores, not probability maps; no ensemble is scored.",
+  "intervals": "Unadjusted two-sided t intervals at the stated uncertainty unit; existing bootstrap intervals remain separate.",
+  "multiplicity": "Complete 57-test ablation and 15-test external families; separate t/exact-W and seed/patient-image families.",
+  "baseline": "One fixed baseline score per image. CSV labels alone do not verify independent training or baseline variability.",
+  "DRIVE": "Retained local test-label provenance is unverified. Numerical reanalysis does not establish canonical GT or experimental efficacy."
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "core_name": "scalar_math_2026-11-16_21-47-36.py",
+  "core_sha256": "07cab14f43527df401671ebf0aa355069308eb5afefe7e6f46ef8f1263a27e2a",
+  "registered_math_sha256": "e2224282cbb3c037bf57bff11bd74bfb4d11bac642a42c7794164a41411094b8",
+  "extracted_functions": [
+    {
+      "function": "sha256",
+      "AST_sha256": "207a0b39186bb8333718c8fcded9e5e7a33d69c287276adfe190d9d856d0d5fe"
+    },
+    {
+      "function": "holm",
+      "AST_sha256": "f332ee29110fcaf539a992b738153d6738d5add02d182d89543fe82e636db1c7"
+    },
+    {
+      "function": "exact_signed_rank",
+      "AST_sha256": "6a273d72c479316ec2aa4aafea1408adbaa7ecb51492590e69c7f7bef8eff95c"
+    },
+    {
+      "function": "describe_differences",
+      "AST_sha256": "6b87e72f0493df43197844ba042d93e6252e24337034e35bbcbb250cf37a23a0"
+    },
+    {
+      "function": "mean_individual_scores",
+      "AST_sha256": "ccd5b5963dc6b7ba659c3cf815ff8e17ef27cbb205630f5b7b87bb110d66be19"
+    },
+    {
+      "function": "contrast_vectors",
+      "AST_sha256": "d945e62c120253e4a4c543c6a4dfae11a0d849d900bdfbf8e34f80313055a30b"
+    },
+    {
+      "function": "analyze",
+      "AST_sha256": "f3ab27ab73d0683c57451fc5f80c90f2adc1f6d6513d18e151e687a65597f0e6"
+    },
+    {
+      "function": "flat_test",
+      "AST_sha256": "2e7f54687adba9ac8be9ac99f035886895cf86925405d09f3f0f55ef565de076"
+    }
+  ],
+  "source_private_runner_sha256": "d872304bbafa7a2fb757d82e3e2029e54d195a278d8c96191d2a985232e09d96",
+  "source_private_math_sha256": "ebf587db2503a35016da4525b815bc6aca7d0ed69ecd51911c45db960e9eeedf"
+}

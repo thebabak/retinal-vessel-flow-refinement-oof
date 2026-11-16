@@ -39,6 +39,8 @@ The [additional paired-analysis package](analysis/paired_statistics_2026-11-16_1
 
 The separately registered [16-arm controlled-ablation implementation](docs/CONTROLLED_ABLATIONS_2026-11-16_20-39-33.md) is also available. Its new training/evaluation study is still in progress; the table above does not contain those pending outcomes. The public path adaptation preserves the executed scientific functions and requires explicit configuration, registration and successful historical-input preflight before execution.
 
+The [supplemental scalar-reanalysis code](analysis/scalar_reanalysis_2026-11-16_21-47-36/README_2026-11-16_21-47-36.txt) provides the fixed 57-test ablation and 15-test external comparison families. Its input template is deliberately incomplete while those experiments are running. The code has synthetic numerical qualification only; no pending outcomes or synthetic performance results are published. This mode reanalyzes published scalar CSVs and does not verify model execution or dataset provenance.
+
 The [official-code comparison package](comparisons/official_code_2026-11-16_20-52-47/README.md) contains pinned SegFlow and FR-UNet source snapshots, their notices, executed reference wrappers and portable entry points. Those additional experiments are in progress. The package's portable layer has only synthetic software qualification; it has not itself generated the recorded study results. It requires local prepared inputs and does not include DRIVE data or upstream pretrained weights.
 
 ## Scope and reproducibility

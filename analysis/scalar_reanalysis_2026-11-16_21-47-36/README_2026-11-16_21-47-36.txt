@@ -1,0 +1,103 @@
+Public scalar numerical reanalysis — input CSV publication pending
+
+This package contains the numerical method and an INCOMPLETE input template.
+No new experimental outcomes or sample performance results are included. The
+template is ready=false, has no image inventories and has no published CSV
+hashes. It cannot run the real reanalysis until the completed scalar input
+package is published. The test fixtures are temporary synthetic software tests.
+
+Scope
+
+The public program reanalyzes numbers in three published per-dataset CSVs. It
+does not train a model, score a prediction, load an image/checkpoint/ZIP, query
+the network, verify dataset provenance or prove independent training seeds.
+No private authorization, machine path, completion attestation or sealing file
+is required by this PUBLIC numerical mode. The separate private experiment
+completion guards remain unchanged and are not replaced by this mode.
+
+The paired math functions and signed-contrast functions are identical to the
+preserved private analysis definitions. code_math_bindings records their AST
+hashes and source-code hashes without embedding private source paths. The
+public plan contains all 19 ablation and five external contrasts per dataset,
+including three signed factorial interactions. Thus the complete families have
+57 and 15 tests, respectively, over CHASE, DRIVE and HRF.
+
+Input format when the completed data package is available
+
+A ready public scalar manifest contains relative POSIX paths and SHA256/size
+bindings for the public mathematical plan and exactly three scalar CSVs. Each
+dataset declares its complete sorted image inventory: CHASE 8, DRIVE 20, HRF 12.
+Every CSV uses canonical method keys and these identifying columns:
+
+arm, refiner_seed, image, subject, output
+
+Metric columns are listed in descriptive_metrics and include dice. Other
+structural metrics may be blank when unavailable; missing values are not zero.
+The raw baseline has refiner_seed=-1, exactly once per image. Each required
+learned method has all five seed labels 42,123,2026,3000,3001 for every image.
+Output is raw or blend. Blends are optional descriptive outputs; any included
+blend arm must have full matched coverage. Duplicates, missing raw arms/seeds,
+missing images or altered registered families block the entire reanalysis.
+
+All relative files must remain inside the manifest directory. No private
+absolute path is resolved. Inputs are hashed before and after computation and
+must match their declared sizes/SHA256s. The generated outputs contain relative
+input paths and hashes, not private machine paths.
+
+Commands
+
+Default inert command, including when the input template is incomplete:
+
+python reanalyze_scalar_tables_2026-11-16_21-47-36.py
+  --manifest scalar_inputs_TEMPLATE_INCOMPLETE_2026-11-16_21-47-36.json
+
+After actual published inputs exist, use their READY manifest explicitly:
+
+python reanalyze_scalar_tables_2026-11-16_21-47-36.py
+  --manifest <public_scalar_inputs_timestamp.json>
+  --execute --output <NEW directory containing yyyy-MM-dd_HH-mm-ss>
+
+The template deliberately remains unusable with --execute. Do not replace its
+missing hashes with invented values or treat fixtures as experimental results.
+
+Numerical outputs and interpretation
+
+Outputs have fresh Asia/Tehran timestamps: full reanalysis JSON, paired-test
+CSV, per-image metric score means/SD, signed per-image Dice contrasts, seed
+means, descriptive mean/SD, and input/plan snapshots. Existing files are never
+overwritten. This is numerical table reanalysis, not fresh efficacy measurement.
+
+Raw Dice is the primary inferential outcome. For each matched seed, compute the
+signed contrast inside every image, then average images. Seed tests use five
+labelled means. The fixed baseline is one model; its training-seed SD is
+unavailable (dash), not zero or five independently fitted baselines.
+
+Patient/image sensitivity averages five individual metric scores within each
+image, not probability maps before scoring. It then averages both eyes within
+each of four CHASE subject labels. DRIVE and HRF use 20 and 12 image units;
+patient independence is unverified. No ensemble is evaluated.
+
+Report sample SD, paired two-sided t tests, unadjusted 95% t intervals and exact
+signed-rank tests. Exact W drops zeros and uses average tied ranks and exact
+random-sign enumeration. With five nonzero seed differences the minimum
+two-sided exact p is 0.0625. Undefined zero-variance t tests stay unavailable,
+using conservative p=1 only for adjustment of the other family members.
+Existing bootstrap intervals are not transferred or recomputed.
+
+Holm is applied separately to the complete 57-test and 15-test families,
+separately for t/exact W and separately for seed/patient-image analyses: 144
+test rows in total. Structural metrics and blends are descriptive only. These
+are post-hoc exploratory conditional statistics, with no pooled FWER claim,
+confirmation of mechanisms, equivalence or population efficacy. The legacy
+analysis key refiner_seed denotes the matched training-seed block, including
+the two adapted external architectures. CSV labels alone do not prove seed
+independence. Retained DRIVE test-label provenance remains unverified.
+
+Validation and requirements
+
+Python 3.10+, NumPy and SciPy are required; no GPU/model library is imported.
+Run test_scalar_reanalysis_2026-11-16_21-47-36.py for synthetic fixtures. The
+tests check exact scalar round trips, full 57/15 families, signed interactions,
+known t/W/Holm cases, missingness, path/hash guards, before/after mutation
+blocking and outputs without private paths. They do not validate experiment
+execution, clinical source labels, predictions or the study's scientific effect.

@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "ready": false,
+  "numerical_table_reanalysis_only": true,
+  "plan": {
+    "path": "public_analysis_plan_2026-11-16_21-47-36.json",
+    "sha256": "4f5edd5c3b093a93f06837c1c88eb0c3d3cf35f229c1bdefead5704c7fbd7fa1"
+  },
+  "descriptive_metrics": [
+    "dice",
+    "iou",
+    "precision",
+    "recall",
+    "cldice",
+    "thin_skeleton_recall",
+    "new_error_rate",
+    "fixed_error_rate",
+    "betti0_absolute_error"
+  ],
+  "datasets": [
+    {
+      "name": "CHASE",
+      "expected_images": 8,
+      "image_ids": [],
+      "csv": {
+        "path": "TO_BE_PUBLISHED_CHASE_scalar_records_2026-11-16_21-47-36.csv",
+        "sha256": null,
+        "size_bytes": null
+      }
+    },
+    {
+      "name": "DRIVE",
+      "expected_images": 20,
+      "image_ids": [],
+      "csv": {
+        "path": "TO_BE_PUBLISHED_DRIVE_scalar_records_2026-11-16_21-47-36.csv",
+        "sha256": null,
+        "size_bytes": null
+      }
+    },
+    {
+      "name": "HRF",
+      "expected_images": 12,
+      "image_ids": [],
+      "csv": {
+        "path": "TO_BE_PUBLISHED_HRF_scalar_records_2026-11-16_21-47-36.csv",
+        "sha256": null,
+        "size_bytes": null
+      }
+    }
+  ],
+  "source_lineage": [],
+  "note": "Deliberately incomplete. Do not set ready=true until the real published per-dataset CSVs, image inventories and SHA256/size bindings exist."
+}
