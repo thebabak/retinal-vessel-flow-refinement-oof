@@ -1,0 +1,127 @@
+{
+  "source_hashes": {
+    "run_official_segflow_2026-11-16_20-19-15.py": "4a6205d7e3f2dab017f85af8cc4e0d8a731d327e9c5f7bda80fd9d04ad4bd80f",
+    "run_official_frunet_2026-11-16_20-19-15.py": "63fb22805c2114bb9ef9eb00ff7abe8f90600e04a4f229c4c7b1cfab5afb3ece",
+    "run_official_segflow_2026-11-16_19-59-19.py": "d52ca44c660909e1c863342fb061d61608cbd60a07044a50e8c1e875f30c3486",
+    "run_official_frunet_2026-11-16_20-11-08.py": "fe704bb8f127afec474fdbb9d17fa65a0fe577f0c8832758a03d0444db616c9a",
+    "metrics/structure_metrics.py": "2d68e695b009313e93d001d7467435ba072cd64b48ee55f84fa20124cf0bfab2",
+    "metrics/structure_metrics_all.py": "89c5bcd7b6d4da1fd859ae099ef5571e9f66362597a372e67097dce8693a4051"
+  },
+  "methods": {
+    "segflow": {
+      "unchanged_function_AST": [
+        "stamp",
+        "sha",
+        "write_json",
+        "make_model",
+        "image_inputs",
+        "target_inputs",
+        "transport_inputs",
+        "probability_from_state",
+        "predict",
+        "_score",
+        "val_score",
+        "prepared_images",
+        "train_fit"
+      ],
+      "path_namespace_or_snapshot_only_AST": [
+        "official_components",
+        "evaluate_fit"
+      ],
+      "controller_or_data_IO_changes": [
+        "main",
+        "load_data",
+        "_record_gating_amendment"
+      ],
+      "training_and_inference_model_calls_unchanged": true,
+      "portable_export_executed_to_produce_results": false
+    },
+    "frunet": {
+      "unchanged_function_AST": [
+        "make_model",
+        "image_inputs",
+        "_score",
+        "predict",
+        "validation_score",
+        "train_fit"
+      ],
+      "path_namespace_or_snapshot_only_AST": [
+        "official_components",
+        "evaluate_fit"
+      ],
+      "controller_or_data_IO_changes": [
+        "main",
+        "load_data",
+        "_record_gating_amendment"
+      ],
+      "training_and_inference_model_calls_unchanged": true,
+      "portable_export_executed_to_produce_results": false
+    }
+  },
+  "official_snapshots": {
+    "fms2": {
+      "FMS/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "FMS/segflow/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "FMS/segflow/image_datasets.py": "14083839286b12c9cfe8ee86ba219ec5f393f6ea56477ca5689711670354b724",
+      "FMS/segflow/sample.py": "06faa983e4a2aa468cf9c4504365b2613dde299beeac1994187a78666a7f7c5a",
+      "FMS/segflow/train.py": "1168fcea3586328b2fe8ee8ee6aca579bf5d5c58c0ac3497420fbf7c3fb8cd97",
+      "FMS/synflow/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "FMS/synflow/dataset.py": "2c4c01ab053196ee696a8057bca2c6c783332c2dd88a96c793ff75578c342070",
+      "FMS/synflow/image_datasets.py": "f4ea416621de69b8953d8e7698736ae526cecb6b090212336db817caf7506e82",
+      "FMS/synflow/mask_dataset.py": "dca86fbc7e8bd1a05fb87049374d04bec59965db82f6920caf3385d55dc89c04",
+      "FMS/synflow/sample.py": "f895151cf9524c31e08e0936e73dfb16780f7fb5af2a383c3f13c40119174bdd",
+      "FMS/synflow/sample_mask.py": "8cac4b13eafae0856da4972248bee789d4001a437f24a78f32978a4e0c7ca17a",
+      "FMS/synflow/train.py": "71954c66feb6e973090f950a267999173ec60ac77b3e40717482bed674ccfab2",
+      "FMS/synflow/train_mask.py": "430d18db623867f2dac6df5473cde3cf14af7823824882a6a8bd876798efee37",
+      "FMS/synflow/utils.py": "601532b12c8d4a4fe838b3933c82c0462b87d1cf624d78b470644c77756dfe45",
+      "LICENSE": "7b3595657feb9303221a467a0669fa4552f7149b7de7d580c0fec0b86b6e37f8",
+      "README.md": "0d95da7a34793ccd865f53127d17083c27e6ceb34c229fd25c1c389bdeb0565e",
+      "requirements.txt": "dc6f6f993d858bb1757d9387202e2d1c18deb1b34cc5b928caa6a684ec5fc0b4",
+      "setup.py": "50abd41bd076929950b8cf2ff980a1282cd63a1bd8da4a80441dda8849e0e082",
+      "torchcfm/__init__.py": "09927126b8b6b3e15bdf07c1e44ea6297e5f5ec0c08d1dc088fd1c90d84f05a4",
+      "torchcfm/conditional_flow_matching.py": "de9bfa86cd6eb073fcdeb878df1d7069ba05d022bfb3b88dde5bda07534bc645",
+      "torchcfm/models/__init__.py": "e1c00fc31546c7a2fe3ada82b0581ab9ab58cb692dc4a50a87cf4a0ebb788e1a",
+      "torchcfm/models/models.py": "f4135579a56515ed01297d1a10c1d913a26094571cde90239ddda896cfb8e30f",
+      "torchcfm/models/unet/__init__.py": "e1f164de5922a4ae4dd840c55dd30f2caa2983ce4e5a2241ad41610d445470f4",
+      "torchcfm/models/unet/fp16_util.py": "b172b15f87672ae199755957ca7f46f3e241e6e73f880a85b6ecc62ce761b598",
+      "torchcfm/models/unet/logger.py": "ea3ccf7373b0e905d81aa0d04c536dccd54be34000f1a05d63db6d94babbf569",
+      "torchcfm/models/unet/nn.py": "fca46120920a14f49ec49c94f993f822de7eafb2c8746782efb46635a4cd2d92",
+      "torchcfm/models/unet/unet.py": "7c7203d4c8b6ceb080d0181872a15833cdf2e9625ac4767277019f49aa1aee7e",
+      "torchcfm/models/unet/unet_residal.py": "3f0de928c8ddda20c3a6f80a5916653675390d47440eae3a3eaafa9b07f980df",
+      "torchcfm/models/unet/unet_sdm_CrackSDM_v3_encoder.py": "fa1a0bae70e1b9b0dd191ac0034d8a57e0e1ed8cf84fac5f64ae9f4742c06337",
+      "torchcfm/optimal_transport.py": "8bbe82e103dfa369bff829b07e774480b51e1d8f6d6ea9e11e0b68da5bc7b971",
+      "torchcfm/utils.py": "b713dfcf41a093b90f91a282cbc9b37c49e7a1a1fcfd6fcc1794e14febd261c2",
+      "torchcfm/version.py": "c586dbebb4f46c4facdce8e0553989cc956f8f114fe18123c406810769e3df30"
+    },
+    "fr_unet": {
+      "LICENSE": "dac618130f7506833d742cfaa38da6d613340931553d0f8f386200f1316820d2",
+      "README.md": "8dde0e10e2af85a1dd914669f8adc24e4a2f9db5a497846d3f62c4f38e686da3",
+      "config.yaml": "5ecffd41aec0bceec71b4cd39abb7bdb2e52c64426b8f0bde720667e9d87a80d",
+      "models/fr_unet.py": "e14a2c6624000ed1bca23adab94ea088d4ae15facfbb170892ae363ae77c93ef",
+      "models/utils.py": "d7c7540af99a6e4789628007c4ec69831d2e37b183e77a5e5dea1b4bc239900e",
+      "requirements.txt": "b8faa8bfae4a051502b88200b1f24d265457fc22360298a82d1fffe654c78064",
+      "utils/helpers.py": "70e6944ade2e1401bfde8165324248b9b29da90e2f5aefe02009c89eabe12508",
+      "utils/losses.py": "65ba70cc393e004320d2a5d60337df1f28363072b095a1e78aebfb66e45237ca"
+    }
+  },
+  "portable_validation_score": {
+    "CHASE": {
+      "original_source": "paired_reproduction/run.py",
+      "original_source_sha256": "08a986392ddd329ea36e878ff954564e207319ea9dc86dd9b3c85abd7a551a7c",
+      "pixel_score_branch_AST_identical": true
+    },
+    "DRIVE": {
+      "original_source": "paired_reproduction/run_drive.py",
+      "original_source_sha256": "7b0ff54e7eafacd037f47cf1dc4fbb21353b4c5d21303ca56d85b199ff706dfe",
+      "pixel_score_branch_AST_identical": true
+    },
+    "HRF": {
+      "original_source": "paired_reproduction/run_hrf_baseline.py",
+      "original_source_sha256": "ca7bb2b98c8a76f18c20cb582c7d3575309086040c6351a1a0e0073cfc47bb05",
+      "pixel_score_branch_AST_identical": true
+    }
+  },
+  "all_structural_metric_function_ASTs_unchanged": true,
+  "executed_originals_preserved_byte_for_byte": true,
+  "data_or_pretrained_weights_exported": false
+}

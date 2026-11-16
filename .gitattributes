@@ -1,3 +1,5 @@
 # Preserve source and saved-table bytes for the recorded SHA256 bindings.
 * -text
+# Pinned third-party snapshots retain upstream whitespace and exact SHA256 bytes.
+comparisons/**/official_comparisons/vendor/** -whitespace
 *.py diff=python

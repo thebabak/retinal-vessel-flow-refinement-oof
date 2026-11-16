@@ -1,0 +1,35 @@
+Source snapshots are distributed with their original notices, unmodified.
+
+FMS2: https://github.com/BabakAsadi94/FMS2
+Commit ab18a8f33c7aa27425d7265c3dc9a69bf1d8c5a4
+MIT Copyright (c) 2024 Peiyang Wu.
+Its LICENSE also reproduces MIT Copyright (c) 2023 Alexander Tong for
+conditional-flow-matching,https://github.com/atong01/conditional-flow-matching.
+See official_comparisons/vendor/fms2/LICENSE for both full notices.
+
+FR-UNet: https://github.com/lseventeen/FR-UNet
+Commit 1856bc206055fdfccde184d0ebf9ac8c3207387d
+MIT Copyright (c) 2022 liuwentao.
+See official_comparisons/vendor/fr_unet/LICENSE for the full notice.
+
+FMS2 citation:
+Asadi, B.; Wu, P.; Golparvar-Fard, M.; Shah, V.; Hajj, R.
+FMS2: Unified Flow Matching for Segmentation and Synthesis of Thin Structures.
+arXiv:2603.13659, 2026. https://arxiv.org/abs/2603.13659
+
+TorchCFM requested citation:
+Tong, A.; Fatras, K.; Malkin, N.; Huguet, G.; Zhang, Y.; Rector-Brooks, J.;
+Wolf, G.; Bengio, Y. Improving and Generalizing Flow-Based Generative Models
+with Minibatch Optimal Transport. Transactions on Machine Learning Research, 2024.
+https://openreview.net/forum?id=CD9Snc73AW
+
+FR-UNet citation:
+Liu, W.; Yang, H.; Tian, T.; Cao, Z.; Pan, X.; Xu, W.; Jin, Y.; Gao, F.
+Full-Resolution Network and Dual-Threshold Iteration for Retinal Vessel and
+Coronary Angiograph Segmentation. IEEE JBHI 26(9), 4623-4634, 2022.
+https://doi.org/10.1109/JBHI.2022.3188710
+
+Our packaging changes are identified by AST_adaptation_proof_2026-11-16_20-40-37.json.
+The package does not contain upstream pretrained weights,images,annotations,
+private correspondence or performance results. No source/checkpoint is
+represented as an unchanged published experimental protocol when adapted.

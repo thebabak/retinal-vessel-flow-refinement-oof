@@ -1,0 +1,16 @@
+{
+  "repository": "https://github.com/lseventeen/FR-UNet",
+  "commit": "1856bc206055fdfccde184d0ebf9ac8c3207387d",
+  "files": {
+    "LICENSE": "dac618130f7506833d742cfaa38da6d613340931553d0f8f386200f1316820d2",
+    "README.md": "8dde0e10e2af85a1dd914669f8adc24e4a2f9db5a497846d3f62c4f38e686da3",
+    "config.yaml": "5ecffd41aec0bceec71b4cd39abb7bdb2e52c64426b8f0bde720667e9d87a80d",
+    "models/fr_unet.py": "e14a2c6624000ed1bca23adab94ea088d4ae15facfbb170892ae363ae77c93ef",
+    "models/utils.py": "d7c7540af99a6e4789628007c4ec69831d2e37b183e77a5e5dea1b4bc239900e",
+    "requirements.txt": "b8faa8bfae4a051502b88200b1f24d265457fc22360298a82d1fffe654c78064",
+    "utils/helpers.py": "70e6944ade2e1401bfde8165324248b9b29da90e2f5aefe02009c89eabe12508",
+    "utils/losses.py": "65ba70cc393e004320d2a5d60337df1f28363072b095a1e78aebfb66e45237ca"
+  },
+  "selection": "Exact tracked source subset required for official core/DTI/loss provenance plus license/README/requirements/config; FR author CLI/data scripts omitted; no data,figures,checkpoints or .git",
+  "source_bytes_modified": false
+}

@@ -1,0 +1,13 @@
+{
+  "integrated_at": "2026-11-16_20-59-47",
+  "source_export_tag": "2026-11-16_20-52-47",
+  "source_export_archive_sha256": "3083c0e0b2fa88c765d368e94de04ab4ebc4e32eb2f3f5e0dd0c822c5a636664",
+  "integration_only_dependency_addition": "tzdata==2025.3 for IANA Asia/Tehran support on Windows",
+  "original_requirements_sha256": "2ea8c3f957a843526a1846e48008b8abe72ada304ae0b75ca578bb41d7f581d2",
+  "integrated_requirements_sha256": "3ce6950e63c3f8020f6a97c05c78a3f2ba86afa959b0de3e5f3ceaa15e09e596",
+  "all_scientific_vendor_and_wrapper_files_unchanged": true,
+  "integrated_synthetic_tests_passed": 13,
+  "timezone_stamp_checked": true,
+  "actual_model_runs_from_portable_packaging": false,
+  "live_experiment_source_changed": false
+}

@@ -1,0 +1,807 @@
+{
+  "schema_version": 1,
+  "input_root": "private_prepared",
+  "datasets": {
+    "CHASE": {
+      "split": {
+        "train": [
+          "Image_01L",
+          "Image_01R",
+          "Image_04L",
+          "Image_04R",
+          "Image_07L",
+          "Image_07R",
+          "Image_08L",
+          "Image_08R",
+          "Image_10L",
+          "Image_10R",
+          "Image_11L",
+          "Image_11R",
+          "Image_12L",
+          "Image_12R",
+          "Image_14L",
+          "Image_14R"
+        ],
+        "validation": [
+          "Image_03L",
+          "Image_03R",
+          "Image_06L",
+          "Image_06R"
+        ],
+        "test": [
+          "Image_02L",
+          "Image_02R",
+          "Image_05L",
+          "Image_05R",
+          "Image_09L",
+          "Image_09R",
+          "Image_13L",
+          "Image_13R"
+        ]
+      },
+      "samples": {
+        "Image_01L": {
+          "path": "private_prepared/CHASE/Image_01L.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256",
+          "subject": 1
+        },
+        "Image_01R": {
+          "path": "private_prepared/CHASE/Image_01R.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256",
+          "subject": 1
+        },
+        "Image_04L": {
+          "path": "private_prepared/CHASE/Image_04L.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256",
+          "subject": 4
+        },
+        "Image_04R": {
+          "path": "private_prepared/CHASE/Image_04R.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256",
+          "subject": 4
+        },
+        "Image_07L": {
+          "path": "private_prepared/CHASE/Image_07L.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256",
+          "subject": 7
+        },
+        "Image_07R": {
+          "path": "private_prepared/CHASE/Image_07R.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256",
+          "subject": 7
+        },
+        "Image_08L": {
+          "path": "private_prepared/CHASE/Image_08L.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256",
+          "subject": 8
+        },
+        "Image_08R": {
+          "path": "private_prepared/CHASE/Image_08R.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256",
+          "subject": 8
+        },
+        "Image_10L": {
+          "path": "private_prepared/CHASE/Image_10L.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256",
+          "subject": 10
+        },
+        "Image_10R": {
+          "path": "private_prepared/CHASE/Image_10R.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256",
+          "subject": 10
+        },
+        "Image_11L": {
+          "path": "private_prepared/CHASE/Image_11L.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256",
+          "subject": 11
+        },
+        "Image_11R": {
+          "path": "private_prepared/CHASE/Image_11R.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256",
+          "subject": 11
+        },
+        "Image_12L": {
+          "path": "private_prepared/CHASE/Image_12L.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256",
+          "subject": 12
+        },
+        "Image_12R": {
+          "path": "private_prepared/CHASE/Image_12R.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256",
+          "subject": 12
+        },
+        "Image_14L": {
+          "path": "private_prepared/CHASE/Image_14L.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256",
+          "subject": 14
+        },
+        "Image_14R": {
+          "path": "private_prepared/CHASE/Image_14R.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256",
+          "subject": 14
+        },
+        "Image_03L": {
+          "path": "private_prepared/CHASE/Image_03L.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256",
+          "subject": 3
+        },
+        "Image_03R": {
+          "path": "private_prepared/CHASE/Image_03R.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256",
+          "subject": 3
+        },
+        "Image_06L": {
+          "path": "private_prepared/CHASE/Image_06L.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256",
+          "subject": 6
+        },
+        "Image_06R": {
+          "path": "private_prepared/CHASE/Image_06R.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256",
+          "subject": 6
+        },
+        "Image_02L": {
+          "path": "private_prepared/CHASE/Image_02L.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256",
+          "subject": 2
+        },
+        "Image_02R": {
+          "path": "private_prepared/CHASE/Image_02R.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256",
+          "subject": 2
+        },
+        "Image_05L": {
+          "path": "private_prepared/CHASE/Image_05L.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256",
+          "subject": 5
+        },
+        "Image_05R": {
+          "path": "private_prepared/CHASE/Image_05R.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256",
+          "subject": 5
+        },
+        "Image_09L": {
+          "path": "private_prepared/CHASE/Image_09L.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256",
+          "subject": 9
+        },
+        "Image_09R": {
+          "path": "private_prepared/CHASE/Image_09R.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256",
+          "subject": 9
+        },
+        "Image_13L": {
+          "path": "private_prepared/CHASE/Image_13L.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256",
+          "subject": 13
+        },
+        "Image_13R": {
+          "path": "private_prepared/CHASE/Image_13R.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256",
+          "subject": 13
+        }
+      },
+      "baseline_references": {
+        "Image_02L": {
+          "path": "private_prepared/CHASE/Image_02L_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "Image_02R": {
+          "path": "private_prepared/CHASE/Image_02R_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "Image_05L": {
+          "path": "private_prepared/CHASE/Image_05L_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "Image_05R": {
+          "path": "private_prepared/CHASE/Image_05R_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "Image_09L": {
+          "path": "private_prepared/CHASE/Image_09L_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "Image_09R": {
+          "path": "private_prepared/CHASE/Image_09R_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "Image_13L": {
+          "path": "private_prepared/CHASE/Image_13L_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "Image_13R": {
+          "path": "private_prepared/CHASE/Image_13R_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        }
+      },
+      "thin_cutoff": null,
+      "ground_truth_provenance": "REPLACE_WITH_TRUTHFUL_SOURCE_AND_LIMITATIONS"
+    },
+    "DRIVE": {
+      "split": {
+        "train": [
+          "21_training",
+          "23_training",
+          "24_training",
+          "25_training",
+          "26_training",
+          "27_training",
+          "28_training",
+          "30_training",
+          "31_training",
+          "32_training",
+          "35_training",
+          "36_training",
+          "37_training",
+          "38_training",
+          "39_training",
+          "40_training"
+        ],
+        "validation": [
+          "22_training",
+          "29_training",
+          "33_training",
+          "34_training"
+        ],
+        "test": [
+          "01_test",
+          "02_test",
+          "03_test",
+          "04_test",
+          "05_test",
+          "06_test",
+          "07_test",
+          "08_test",
+          "09_test",
+          "10_test",
+          "11_test",
+          "12_test",
+          "13_test",
+          "14_test",
+          "15_test",
+          "16_test",
+          "17_test",
+          "18_test",
+          "19_test",
+          "20_test"
+        ]
+      },
+      "samples": {
+        "21_training": {
+          "path": "private_prepared/DRIVE/21_training.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "23_training": {
+          "path": "private_prepared/DRIVE/23_training.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "24_training": {
+          "path": "private_prepared/DRIVE/24_training.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "25_training": {
+          "path": "private_prepared/DRIVE/25_training.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "26_training": {
+          "path": "private_prepared/DRIVE/26_training.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "27_training": {
+          "path": "private_prepared/DRIVE/27_training.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "28_training": {
+          "path": "private_prepared/DRIVE/28_training.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "30_training": {
+          "path": "private_prepared/DRIVE/30_training.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "31_training": {
+          "path": "private_prepared/DRIVE/31_training.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "32_training": {
+          "path": "private_prepared/DRIVE/32_training.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "35_training": {
+          "path": "private_prepared/DRIVE/35_training.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "36_training": {
+          "path": "private_prepared/DRIVE/36_training.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "37_training": {
+          "path": "private_prepared/DRIVE/37_training.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "38_training": {
+          "path": "private_prepared/DRIVE/38_training.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "39_training": {
+          "path": "private_prepared/DRIVE/39_training.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "40_training": {
+          "path": "private_prepared/DRIVE/40_training.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "22_training": {
+          "path": "private_prepared/DRIVE/22_training.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "29_training": {
+          "path": "private_prepared/DRIVE/29_training.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "33_training": {
+          "path": "private_prepared/DRIVE/33_training.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "34_training": {
+          "path": "private_prepared/DRIVE/34_training.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "01_test": {
+          "path": "private_prepared/DRIVE/01_test.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "02_test": {
+          "path": "private_prepared/DRIVE/02_test.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "03_test": {
+          "path": "private_prepared/DRIVE/03_test.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "04_test": {
+          "path": "private_prepared/DRIVE/04_test.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "05_test": {
+          "path": "private_prepared/DRIVE/05_test.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "06_test": {
+          "path": "private_prepared/DRIVE/06_test.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "07_test": {
+          "path": "private_prepared/DRIVE/07_test.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "08_test": {
+          "path": "private_prepared/DRIVE/08_test.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "09_test": {
+          "path": "private_prepared/DRIVE/09_test.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "10_test": {
+          "path": "private_prepared/DRIVE/10_test.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "11_test": {
+          "path": "private_prepared/DRIVE/11_test.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "12_test": {
+          "path": "private_prepared/DRIVE/12_test.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "13_test": {
+          "path": "private_prepared/DRIVE/13_test.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "14_test": {
+          "path": "private_prepared/DRIVE/14_test.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "15_test": {
+          "path": "private_prepared/DRIVE/15_test.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "16_test": {
+          "path": "private_prepared/DRIVE/16_test.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "17_test": {
+          "path": "private_prepared/DRIVE/17_test.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "18_test": {
+          "path": "private_prepared/DRIVE/18_test.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "19_test": {
+          "path": "private_prepared/DRIVE/19_test.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "20_test": {
+          "path": "private_prepared/DRIVE/20_test.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        }
+      },
+      "baseline_references": {
+        "01_test": {
+          "path": "private_prepared/DRIVE/01_test_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "02_test": {
+          "path": "private_prepared/DRIVE/02_test_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "03_test": {
+          "path": "private_prepared/DRIVE/03_test_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "04_test": {
+          "path": "private_prepared/DRIVE/04_test_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "05_test": {
+          "path": "private_prepared/DRIVE/05_test_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "06_test": {
+          "path": "private_prepared/DRIVE/06_test_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "07_test": {
+          "path": "private_prepared/DRIVE/07_test_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "08_test": {
+          "path": "private_prepared/DRIVE/08_test_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "09_test": {
+          "path": "private_prepared/DRIVE/09_test_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "10_test": {
+          "path": "private_prepared/DRIVE/10_test_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "11_test": {
+          "path": "private_prepared/DRIVE/11_test_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "12_test": {
+          "path": "private_prepared/DRIVE/12_test_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "13_test": {
+          "path": "private_prepared/DRIVE/13_test_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "14_test": {
+          "path": "private_prepared/DRIVE/14_test_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "15_test": {
+          "path": "private_prepared/DRIVE/15_test_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "16_test": {
+          "path": "private_prepared/DRIVE/16_test_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "17_test": {
+          "path": "private_prepared/DRIVE/17_test_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "18_test": {
+          "path": "private_prepared/DRIVE/18_test_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "19_test": {
+          "path": "private_prepared/DRIVE/19_test_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "20_test": {
+          "path": "private_prepared/DRIVE/20_test_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        }
+      },
+      "thin_cutoff": null,
+      "ground_truth_provenance": "REPLACE_WITH_TRUTHFUL_SOURCE_AND_LIMITATIONS"
+    },
+    "HRF": {
+      "split": {
+        "train": [
+          "01_dr",
+          "01_h",
+          "02_g",
+          "03_dr",
+          "03_g",
+          "04_dr",
+          "04_h",
+          "05_dr",
+          "05_g",
+          "06_dr",
+          "06_h",
+          "07_g",
+          "07_h",
+          "08_dr",
+          "08_g",
+          "08_h",
+          "09_dr",
+          "09_g",
+          "10_g",
+          "10_h",
+          "11_dr",
+          "11_g",
+          "11_h",
+          "12_g",
+          "12_h",
+          "14_dr",
+          "15_h"
+        ],
+        "validation": [
+          "02_dr",
+          "03_h",
+          "05_h",
+          "06_g",
+          "13_dr",
+          "15_g"
+        ],
+        "test": [
+          "01_g",
+          "02_h",
+          "04_g",
+          "07_dr",
+          "09_h",
+          "10_dr",
+          "12_dr",
+          "13_g",
+          "13_h",
+          "14_g",
+          "14_h",
+          "15_dr"
+        ]
+      },
+      "samples": {
+        "01_dr": {
+          "path": "private_prepared/HRF/01_dr.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "01_h": {
+          "path": "private_prepared/HRF/01_h.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "02_g": {
+          "path": "private_prepared/HRF/02_g.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "03_dr": {
+          "path": "private_prepared/HRF/03_dr.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "03_g": {
+          "path": "private_prepared/HRF/03_g.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "04_dr": {
+          "path": "private_prepared/HRF/04_dr.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "04_h": {
+          "path": "private_prepared/HRF/04_h.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "05_dr": {
+          "path": "private_prepared/HRF/05_dr.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "05_g": {
+          "path": "private_prepared/HRF/05_g.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "06_dr": {
+          "path": "private_prepared/HRF/06_dr.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "06_h": {
+          "path": "private_prepared/HRF/06_h.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "07_g": {
+          "path": "private_prepared/HRF/07_g.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "07_h": {
+          "path": "private_prepared/HRF/07_h.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "08_dr": {
+          "path": "private_prepared/HRF/08_dr.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "08_g": {
+          "path": "private_prepared/HRF/08_g.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "08_h": {
+          "path": "private_prepared/HRF/08_h.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "09_dr": {
+          "path": "private_prepared/HRF/09_dr.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "09_g": {
+          "path": "private_prepared/HRF/09_g.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "10_g": {
+          "path": "private_prepared/HRF/10_g.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "10_h": {
+          "path": "private_prepared/HRF/10_h.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "11_dr": {
+          "path": "private_prepared/HRF/11_dr.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "11_g": {
+          "path": "private_prepared/HRF/11_g.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "11_h": {
+          "path": "private_prepared/HRF/11_h.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "12_g": {
+          "path": "private_prepared/HRF/12_g.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "12_h": {
+          "path": "private_prepared/HRF/12_h.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "14_dr": {
+          "path": "private_prepared/HRF/14_dr.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "15_h": {
+          "path": "private_prepared/HRF/15_h.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "02_dr": {
+          "path": "private_prepared/HRF/02_dr.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "03_h": {
+          "path": "private_prepared/HRF/03_h.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "05_h": {
+          "path": "private_prepared/HRF/05_h.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "06_g": {
+          "path": "private_prepared/HRF/06_g.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "13_dr": {
+          "path": "private_prepared/HRF/13_dr.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "15_g": {
+          "path": "private_prepared/HRF/15_g.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "01_g": {
+          "path": "private_prepared/HRF/01_g.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "02_h": {
+          "path": "private_prepared/HRF/02_h.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "04_g": {
+          "path": "private_prepared/HRF/04_g.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "07_dr": {
+          "path": "private_prepared/HRF/07_dr.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "09_h": {
+          "path": "private_prepared/HRF/09_h.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "10_dr": {
+          "path": "private_prepared/HRF/10_dr.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "12_dr": {
+          "path": "private_prepared/HRF/12_dr.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "13_g": {
+          "path": "private_prepared/HRF/13_g.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "13_h": {
+          "path": "private_prepared/HRF/13_h.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "14_g": {
+          "path": "private_prepared/HRF/14_g.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "14_h": {
+          "path": "private_prepared/HRF/14_h.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "15_dr": {
+          "path": "private_prepared/HRF/15_dr.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        }
+      },
+      "baseline_references": {
+        "01_g": {
+          "path": "private_prepared/HRF/01_g_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "02_h": {
+          "path": "private_prepared/HRF/02_h_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "04_g": {
+          "path": "private_prepared/HRF/04_g_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "07_dr": {
+          "path": "private_prepared/HRF/07_dr_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "09_h": {
+          "path": "private_prepared/HRF/09_h_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "10_dr": {
+          "path": "private_prepared/HRF/10_dr_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "12_dr": {
+          "path": "private_prepared/HRF/12_dr_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "13_g": {
+          "path": "private_prepared/HRF/13_g_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "13_h": {
+          "path": "private_prepared/HRF/13_h_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "14_g": {
+          "path": "private_prepared/HRF/14_g_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "14_h": {
+          "path": "private_prepared/HRF/14_h_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        },
+        "15_dr": {
+          "path": "private_prepared/HRF/15_dr_reference.npz",
+          "sha256": "REPLACE_WITH_ACTUAL_SHA256"
+        }
+      },
+      "thin_cutoff": null,
+      "ground_truth_provenance": "REPLACE_WITH_TRUTHFUL_SOURCE_AND_LIMITATIONS"
+    }
+  }
+}

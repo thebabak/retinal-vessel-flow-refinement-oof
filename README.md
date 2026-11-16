@@ -39,6 +39,8 @@ The [additional paired-analysis package](analysis/paired_statistics_2026-11-16_1
 
 The separately registered [16-arm controlled-ablation implementation](docs/CONTROLLED_ABLATIONS_2026-11-16_20-39-33.md) is also available. Its new training/evaluation study is still in progress; the table above does not contain those pending outcomes. The public path adaptation preserves the executed scientific functions and requires explicit configuration, registration and successful historical-input preflight before execution.
 
+The [official-code comparison package](comparisons/official_code_2026-11-16_20-52-47/README.md) contains pinned SegFlow and FR-UNet source snapshots, their notices, executed reference wrappers and portable entry points. Those additional experiments are in progress. The package's portable layer has only synthetic software qualification; it has not itself generated the recorded study results. It requires local prepared inputs and does not include DRIVE data or upstream pretrained weights.
+
 ## Scope and reproducibility
 
 - Training coarse maps are retained out-of-fold (OOF) predictions; validation/test maps come from the frozen full-training baseline, seed 42.
@@ -106,6 +108,6 @@ Repository preparation did not retrain models or recompute the saved experimenta
 
 Use [CITATION.cff](CITATION.cff) to cite this software repository. The associated unpublished manuscript title and author list are given above; a DOI for that new manuscript has not been added.
 
-A code license has not yet been selected by the authors, and this repository currently contains no `LICENSE` file. No MIT/GPL or other license grant is asserted. Source-dataset access and redistribution remain subject to the original providers' terms.
+A license for the authors' own code has not yet been selected, and there is no root `LICENSE` file granting it. The official-code comparison package preserves the separate MIT notices for its third-party FMS²/TorchCFM and FR-UNet snapshots; those notices do not assign a license to unrelated author code. Source-dataset access and redistribution remain subject to the original providers' terms.
 
 See [method attribution and retained-source provenance](docs/ATTRIBUTIONS.md) for the clDice and baseline references.
