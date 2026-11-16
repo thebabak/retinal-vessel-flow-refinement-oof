@@ -1,0 +1,10 @@
+{
+  "changed_at": "2026-11-16_21-29-05",
+  "scope": "Test-process isolation only; no scientific/runtime code changes",
+  "file": "tests/test_controlled_ablation_export.py",
+  "sha256": "4241769efcab4b593ca47afb5a6674689f350b68ded54ffc818c525a1cb6985e",
+  "reason": "Registration/configuration checks run in fresh child interpreters to preserve the required configure-before-loader import contract under whole-suite discovery.",
+  "canonical_root_test_suite_passed": 61,
+  "dataset_model_or_source_archive_work_performed": false,
+  "historical_export_snapshot_preserved": true
+}

@@ -71,42 +71,58 @@ class PortableGateTests(unittest.TestCase):
         path=folder/"paths.json"
         path.write_text(json.dumps(dict(artifact_root=str(folder/"retained"),output_root=str(folder/"runs"))))
         return path
+    def configured_child(self,folder,body):
+        config=self.configuration(folder)
+        self.child("from pathlib import Path\nimport json,io\nfrom contextlib import redirect_stdout\nfrom unittest.mock import patch\n"
+            "from flow_matching_refiner.controlled_ablations import cli\n"
+            f"config=Path({str(config)!r})\nfolder=Path({str(folder)!r})\n"+body)
     def test_registration_is_data_free_and_records_all16arms(self):
-        from flow_matching_refiner.controlled_ablations import cli
         with tempfile.TemporaryDirectory() as folder:
-            config=self.configuration(folder);out=Path(folder)/"runs/ablations_2026-11-16_00-00-00"
-            with redirect_stdout(io.StringIO()):result=cli.main(["--config",str(config),"--register","--output",str(out)])
-            self.assertFalse(result["training_performed"])
-            design=json.loads(next(out.glob("prespecified_design_*.json")).read_text())
-            self.assertEqual(len(design["arms"]),16);self.assertEqual(design["new_final_fits"],240)
-            self.assertFalse((Path(folder)/"retained").exists())
+            self.configured_child(folder,"""
+out=folder/"runs/ablations_2026-11-16_00-00-00"
+with redirect_stdout(io.StringIO()):result=cli.main(["--config",str(config),"--register","--output",str(out)])
+assert not result["training_performed"]
+design=json.loads(next(out.glob("prespecified_design_*.json")).read_text())
+assert len(design["arms"])==16 and design["new_final_fits"]==240
+assert not (folder/"retained").exists()
+""")
     def test_registration_rejects_existing_result_directory(self):
-        from flow_matching_refiner.controlled_ablations import cli
         with tempfile.TemporaryDirectory() as folder:
-            config=self.configuration(folder);out=Path(folder)/"runs/ablations_2026-11-16_00-00-00"
-            out.mkdir(parents=True);marker=out/"original.txt";marker.write_text("unchanged")
-            with self.assertRaises(FileExistsError):cli.main(["--config",str(config),"--register","--output",str(out)])
-            self.assertEqual(marker.read_text(),"unchanged")
+            self.configured_child(folder,"""
+out=folder/"runs/ablations_2026-11-16_00-00-00"
+out.mkdir(parents=True);marker=out/"original.txt";marker.write_text("unchanged")
+try:cli.main(["--config",str(config),"--register","--output",str(out)])
+except FileExistsError:pass
+else:raise AssertionError("Existing run was accepted")
+assert marker.read_text()=="unchanged"
+""")
     def test_registration_rejects_missing_timestamp(self):
-        from flow_matching_refiner.controlled_ablations import cli
         with tempfile.TemporaryDirectory() as folder:
-            config=self.configuration(folder);out=Path(folder)/"runs/undated"
-            with self.assertRaises(ValueError):cli.main(["--config",str(config),"--register","--output",str(out)])
-            self.assertFalse(out.exists())
+            self.configured_child(folder,"""
+out=folder/"runs/undated"
+try:cli.main(["--config",str(config),"--register","--output",str(out)])
+except ValueError:pass
+else:raise AssertionError("Undated output was accepted")
+assert not out.exists()
+""")
     def test_output_may_not_escape_configured_output_root(self):
-        from flow_matching_refiner.controlled_ablations import cli
         with tempfile.TemporaryDirectory() as folder:
-            config=self.configuration(folder);out=Path(folder)/"retained/ablations_2026-11-16_00-00-00"
-            with self.assertRaises(ValueError):cli.main(["--config",str(config),"--register","--output",str(out)])
-            self.assertFalse(out.exists())
+            self.configured_child(folder,"""
+out=folder/"retained/ablations_2026-11-16_00-00-00"
+try:cli.main(["--config",str(config),"--register","--output",str(out)])
+except ValueError:pass
+else:raise AssertionError("Retained-input output was accepted")
+assert not out.exists()
+""")
     def test_execute_cannot_skip_strict_preflight_failure(self):
-        from flow_matching_refiner.controlled_ablations import cli
         with tempfile.TemporaryDirectory() as folder:
-            config=self.configuration(folder)
-            with patch.object(cli,"preflight",side_effect=FileNotFoundError("missing original bytes")) as guard:
-                with self.assertRaisesRegex(FileNotFoundError,"missing original bytes"):
-                    cli.main(["--config",str(config),"--execute","--output",str(Path(folder)/"runs/missing")])
-                guard.assert_called_once()
+            self.configured_child(folder,"""
+with patch.object(cli,"preflight",side_effect=FileNotFoundError("missing original bytes")) as guard:
+ try:cli.main(["--config",str(config),"--execute","--output",str(folder/"runs/missing")])
+ except FileNotFoundError as error:assert "missing original bytes" in str(error)
+ else:raise AssertionError("Strict preflight failure was ignored")
+ guard.assert_called_once()
+""")
 
 
 if __name__=="__main__":unittest.main(verbosity=2)
