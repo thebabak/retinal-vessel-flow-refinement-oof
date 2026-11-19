@@ -1,3 +1,5 @@
+> Current study: see [THREE_DATASET_COMPLETION_2026-11-19_12-03-07.md](THREE_DATASET_COMPLETION_2026-11-19_12-03-07.md). This document records the earlier initial scope; dated progress and release statements below are historical.
+
 # Saved results and interpretation
 
 These tables reproduce completed, verified summaries. Formatting to six decimals does not change the underlying values; the [published CSV/JSON records](../results/) retain the saved precision. No model fitting, prediction evaluation or confidence-interval calculation was performed while preparing this repository.

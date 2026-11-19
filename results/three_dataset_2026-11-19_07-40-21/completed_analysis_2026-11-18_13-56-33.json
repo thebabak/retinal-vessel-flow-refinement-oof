@@ -1,0 +1,11 @@
+{
+  "completed_at": "2026-11-19_07-06-31",
+  "prediction_files": 9449,
+  "per_image_rows": 15070,
+  "summary_rows": 2652,
+  "paired_rows": 1572,
+  "all_input_bytes_unchanged": true,
+  "seed_CIs": "t df4 conditional correction-stage uncertainty; not independent whole-pipeline or patient generalization CIs",
+  "bootstrap": "50000 crossed seed and subject/image draws; stratified by outerfold; exploratory",
+  "historical_table_numbers_not_used": true
+}

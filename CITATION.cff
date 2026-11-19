@@ -9,19 +9,16 @@ authors:
     given-names: Hanieh
   - family-names: Dinesh
     given-names: Chinthaka
-date-released: "2026-11-16"
+date-released: "2026-11-19"
 url: "https://github.com/thebabak/retinal-vessel-flow-refinement-oof"
 repository-code: "https://github.com/thebabak/retinal-vessel-flow-refinement-oof"
 abstract: >-
-  Research implementation and saved numerical tables for three separately
-  evaluated retinal-vessel refinement recipes using retained out-of-fold
-  coarse maps: Direct refinement with thin recovery and anchoring,
-  error-selective flow matching with full local endpoint supervision and
-  anchoring, and native-input patch Direct refinement. The associated
-  manuscript, Structural Objectives and Native-Resolution Patches for Direct
-  and Flow-Matching Retinal Vessel Refinement, by Babak Bayanian,
-  Hanieh Naderi and Chinthaka Dinesh is unpublished. No manuscript DOI is
-  asserted.
+  Research code, manuscript and saved verified tables for the three-dataset
+  study of Flow Matching and matched Direct retinal-vessel refinement using
+  native patches and nested out-of-fold inputs. Five correction-training seeds
+  are conditional on shared upstream fits. Calibrated corrections improve
+  some endpoints, but a Flow-specific advantage is not established. The
+  associated manuscript is unpublished and has no asserted manuscript DOI.
 keywords:
   - retinal vessel segmentation
   - flow matching

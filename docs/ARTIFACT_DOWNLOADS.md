@@ -1,3 +1,5 @@
+> Current study: see [THREE_DATASET_COMPLETION_2026-11-19_12-03-07.md](THREE_DATASET_COMPLETION_2026-11-19_12-03-07.md). This document records the earlier initial scope; dated progress and release statements below are historical.
+
 # Downloading and checking research artifacts
 
 The timestamped artifact manifest lists the public GitHub Release ZIPs, their exact sizes and SHA256 digests, and every extracted member's relative path, size and SHA256. It also declares provider-required inputs that are not contained in those ZIPs. The manifest does not grant a new license to source datasets or third-party annotations.

@@ -1,0 +1,24 @@
+{
+  "created_at": "2026-11-19_12-03-07",
+  "numerical_reanalysis_performed": false,
+  "csv_exports": [
+    {
+      "file": "all_verified_per_image_2026-11-18_13-56-33.csv",
+      "rows": 15070,
+      "omitted_columns": [
+        "path"
+      ],
+      "source_sha256": "7dddd873ba3f78dffb36709ccef58f18e80957550133560f91474481770d3fd3",
+      "public_sha256": "d79f3bb9d8ccdec9816150292d3e77cf2728c404ac1560fa2242ccd7e97b46da"
+    },
+    {
+      "file": "verified_identity_masks_2026-11-18_13-56-33.csv",
+      "rows": 15030,
+      "omitted_columns": [
+        "path"
+      ],
+      "source_sha256": "764b8623066da08e772d81ac7d8d83e2a9bf23f868b61f35a42f1d6a35aab5c8",
+      "public_sha256": "9138fea4937aed947d1bbe839483329064e705f50718b354efa2d0a21f2f1903"
+    }
+  ]
+}

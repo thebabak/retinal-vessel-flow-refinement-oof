@@ -1,0 +1,19 @@
+{
+  "verified_at": "2026-11-19_07-13-51",
+  "independently_implemented_metrics": [
+    "dice",
+    "precision",
+    "cldice",
+    "thin_skeleton_recall"
+  ],
+  "metric_rows_verified": 15070,
+  "scalar_metrics_verified": 60280,
+  "unique_GT_FOV_fields": 113,
+  "locked_decision_files": 566,
+  "distinct_bound_checkpoint_and_input_files_verified": 720,
+  "consecutive_training_logs": 482,
+  "test_scopes_covered": 21,
+  "all_planned_test_images_seeds_and_output_groups_covered": true,
+  "all_previous_bound_manuscripts_and_sources_unchanged": true,
+  "implementation": "Independent NumPy confusion counts and hard skeleton/EDT formulas; same pinned scipy/skimage primitives, no use of the original metric function."
+}

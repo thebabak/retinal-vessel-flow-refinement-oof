@@ -1,0 +1,309 @@
+[
+  {
+    "phase": "controls",
+    "dataset": "HRF",
+    "rows": 1920,
+    "prediction_files": 960,
+    "output_groups": 32,
+    "training_seed_labels": [
+      42,
+      123,
+      2026,
+      3000,
+      3001
+    ],
+    "held_out_images": 12
+  },
+  {
+    "phase": "encoded",
+    "dataset": "DRIVE",
+    "rows": 20,
+    "prediction_files": 20,
+    "output_groups": 1,
+    "training_seed_labels": [
+      42
+    ],
+    "held_out_images": 20
+  },
+  {
+    "phase": "encoded",
+    "dataset": "HRF",
+    "rows": 12,
+    "prediction_files": 12,
+    "output_groups": 1,
+    "training_seed_labels": [
+      42
+    ],
+    "held_out_images": 12
+  },
+  {
+    "phase": "pixel",
+    "dataset": "DRIVE",
+    "rows": 200,
+    "prediction_files": 100,
+    "output_groups": 2,
+    "training_seed_labels": [
+      42,
+      123,
+      2026,
+      3000,
+      3001
+    ],
+    "held_out_images": 20
+  },
+  {
+    "phase": "pixel",
+    "dataset": "HRF",
+    "rows": 120,
+    "prediction_files": 60,
+    "output_groups": 2,
+    "training_seed_labels": [
+      42,
+      123,
+      2026,
+      3000,
+      3001
+    ],
+    "held_out_images": 12
+  },
+  {
+    "phase": "native_flow",
+    "dataset": "HRF",
+    "rows": 120,
+    "prediction_files": 60,
+    "output_groups": 2,
+    "training_seed_labels": [
+      42,
+      123,
+      2026,
+      3000,
+      3001
+    ],
+    "held_out_images": 12
+  },
+  {
+    "phase": "anchored",
+    "dataset": "HRF",
+    "rows": 120,
+    "prediction_files": 60,
+    "output_groups": 2,
+    "training_seed_labels": [
+      42,
+      123,
+      2026,
+      3000,
+      3001
+    ],
+    "held_out_images": 12
+  },
+  {
+    "phase": "fully_oof",
+    "dataset": "HRF",
+    "rows": 120,
+    "prediction_files": 60,
+    "output_groups": 2,
+    "training_seed_labels": [
+      42,
+      123,
+      2026,
+      3000,
+      3001
+    ],
+    "held_out_images": 12
+  },
+  {
+    "phase": "topology",
+    "dataset": "HRF",
+    "rows": 120,
+    "prediction_files": 60,
+    "output_groups": 2,
+    "training_seed_labels": [
+      42,
+      123,
+      2026,
+      3000,
+      3001
+    ],
+    "held_out_images": 12
+  },
+  {
+    "phase": "retained",
+    "dataset": "HRF",
+    "rows": 120,
+    "prediction_files": 60,
+    "output_groups": 2,
+    "training_seed_labels": [
+      42,
+      123,
+      2026,
+      3000,
+      3001
+    ],
+    "held_out_images": 12
+  },
+  {
+    "phase": "local_acceptor",
+    "dataset": "DRIVE",
+    "rows": 400,
+    "prediction_files": 200,
+    "output_groups": 4,
+    "training_seed_labels": [
+      42,
+      123,
+      2026,
+      3000,
+      3001
+    ],
+    "held_out_images": 20
+  },
+  {
+    "phase": "local_acceptor",
+    "dataset": "HRF",
+    "rows": 240,
+    "prediction_files": 120,
+    "output_groups": 4,
+    "training_seed_labels": [
+      42,
+      123,
+      2026,
+      3000,
+      3001
+    ],
+    "held_out_images": 12
+  },
+  {
+    "phase": "rollout",
+    "dataset": "DRIVE",
+    "rows": 400,
+    "prediction_files": 200,
+    "output_groups": 4,
+    "training_seed_labels": [
+      42,
+      123,
+      2026,
+      3000,
+      3001
+    ],
+    "held_out_images": 20
+  },
+  {
+    "phase": "rollout",
+    "dataset": "HRF",
+    "rows": 240,
+    "prediction_files": 120,
+    "output_groups": 4,
+    "training_seed_labels": [
+      42,
+      123,
+      2026,
+      3000,
+      3001
+    ],
+    "held_out_images": 12
+  },
+  {
+    "phase": "context",
+    "dataset": "DRIVE",
+    "rows": 400,
+    "prediction_files": 200,
+    "output_groups": 4,
+    "training_seed_labels": [
+      42,
+      123,
+      2026,
+      3000,
+      3001
+    ],
+    "held_out_images": 20
+  },
+  {
+    "phase": "context",
+    "dataset": "HRF",
+    "rows": 240,
+    "prediction_files": 120,
+    "output_groups": 4,
+    "training_seed_labels": [
+      42,
+      123,
+      2026,
+      3000,
+      3001
+    ],
+    "held_out_images": 12
+  },
+  {
+    "phase": "fresh_cv",
+    "dataset": "DRIVE",
+    "rows": 800,
+    "prediction_files": 400,
+    "output_groups": 4,
+    "training_seed_labels": [
+      42,
+      123,
+      2026,
+      3000,
+      3001
+    ],
+    "held_out_images": 40
+  },
+  {
+    "phase": "fresh_cv",
+    "dataset": "HRF",
+    "rows": 900,
+    "prediction_files": 450,
+    "output_groups": 4,
+    "training_seed_labels": [
+      42,
+      123,
+      2026,
+      3000,
+      3001
+    ],
+    "held_out_images": 45
+  },
+  {
+    "phase": "calibration",
+    "dataset": "DRIVE",
+    "rows": 400,
+    "prediction_files": 400,
+    "output_groups": 2,
+    "training_seed_labels": [
+      42,
+      123,
+      2026,
+      3000,
+      3001
+    ],
+    "held_out_images": 40
+  },
+  {
+    "phase": "calibration",
+    "dataset": "HRF",
+    "rows": 450,
+    "prediction_files": 450,
+    "output_groups": 2,
+    "training_seed_labels": [
+      42,
+      123,
+      2026,
+      3000,
+      3001
+    ],
+    "held_out_images": 45
+  },
+  {
+    "phase": "segflow",
+    "dataset": "HRF",
+    "rows": 60,
+    "prediction_files": 60,
+    "output_groups": 1,
+    "training_seed_labels": [
+      42,
+      123,
+      2026,
+      3000,
+      3001
+    ],
+    "held_out_images": 12
+  }
+]

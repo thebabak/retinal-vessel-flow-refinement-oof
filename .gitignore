@@ -81,3 +81,6 @@ Thumbs.db
 
 # Sanitized published results/configuration remain tracked.
 # Do not add blanket CSV or JSON exclusions.
+
+# Allowlisted public manuscript assets; correspondence remains excluded.
+!/manuscripts/three_dataset_2026-11-19_07-40-21/**

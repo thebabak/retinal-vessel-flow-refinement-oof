@@ -1,3 +1,5 @@
+> Current study: see [THREE_DATASET_COMPLETION_2026-11-19_12-03-07.md](THREE_DATASET_COMPLETION_2026-11-19_12-03-07.md). This document records the earlier initial scope; dated progress and release statements below are historical.
+
 # Recorded environment and software checks
 
 The experiments were run with 64-bit CPython 3.13.5 on Windows. The retained

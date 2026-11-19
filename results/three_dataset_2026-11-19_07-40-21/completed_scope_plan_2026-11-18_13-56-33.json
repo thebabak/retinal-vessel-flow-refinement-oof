@@ -1,0 +1,153 @@
+{
+  "sealed": true,
+  "jobs": [
+    {
+      "phase": "controls",
+      "dataset": "HRF"
+    },
+    {
+      "phase": "encoded",
+      "dataset": "DRIVE"
+    },
+    {
+      "phase": "encoded_diagnosis",
+      "dataset": "DRIVE"
+    },
+    {
+      "phase": "encoded",
+      "dataset": "HRF"
+    },
+    {
+      "phase": "encoded_diagnosis",
+      "dataset": "HRF"
+    },
+    {
+      "phase": "pixel",
+      "dataset": "DRIVE"
+    },
+    {
+      "phase": "pixel",
+      "dataset": "HRF"
+    },
+    {
+      "phase": "native_flow",
+      "dataset": "HRF"
+    },
+    {
+      "phase": "anchored",
+      "dataset": "HRF"
+    },
+    {
+      "phase": "strict_sources",
+      "dataset": "HRF"
+    },
+    {
+      "phase": "fully_oof",
+      "dataset": "HRF"
+    },
+    {
+      "phase": "topology",
+      "dataset": "HRF"
+    },
+    {
+      "phase": "retained",
+      "dataset": "HRF"
+    },
+    {
+      "phase": "strict_sources",
+      "dataset": "DRIVE"
+    },
+    {
+      "phase": "local_acceptor",
+      "dataset": "DRIVE"
+    },
+    {
+      "phase": "local_acceptor",
+      "dataset": "HRF"
+    },
+    {
+      "phase": "rollout",
+      "dataset": "DRIVE"
+    },
+    {
+      "phase": "rollout",
+      "dataset": "HRF"
+    },
+    {
+      "phase": "geometry",
+      "dataset": "DRIVE"
+    },
+    {
+      "phase": "geometry",
+      "dataset": "HRF"
+    },
+    {
+      "phase": "context",
+      "dataset": "DRIVE"
+    },
+    {
+      "phase": "precision_reselection",
+      "dataset": "DRIVE"
+    },
+    {
+      "phase": "context",
+      "dataset": "HRF"
+    },
+    {
+      "phase": "precision_reselection",
+      "dataset": "HRF"
+    },
+    {
+      "phase": "fresh_sources",
+      "dataset": "DRIVE"
+    },
+    {
+      "phase": "fresh_sources",
+      "dataset": "HRF"
+    },
+    {
+      "phase": "fresh_cv",
+      "dataset": "DRIVE"
+    },
+    {
+      "phase": "fresh_cv",
+      "dataset": "HRF"
+    },
+    {
+      "phase": "calibration",
+      "dataset": "DRIVE"
+    },
+    {
+      "phase": "calibration",
+      "dataset": "HRF"
+    },
+    {
+      "phase": "gap",
+      "dataset": "DRIVE"
+    },
+    {
+      "phase": "gap",
+      "dataset": "HRF"
+    },
+    {
+      "phase": "frunet",
+      "dataset": "DRIVE"
+    },
+    {
+      "phase": "segflow",
+      "dataset": "HRF"
+    },
+    {
+      "phase": "bias_probe",
+      "dataset": "DRIVE"
+    },
+    {
+      "phase": "bias_probe",
+      "dataset": "HRF"
+    }
+  ],
+  "completion_policy": "Report every comparison including negative and identity outputs. No test-based stopping or retuning. All prior studies preserved. Fresh DRIVE CV uses all40 native-size annotated retained images; HRF uses45 pathology-stratified images. Separate from the original fixed test splits.",
+  "sealed_at": "2026-11-18_14-42-50",
+  "planned_new_training_fits": 482,
+  "conditional_calibration": "Same aggregate four-metric validation gate as CHASE. Only if passed: calibrate the4additional stored seeds, lock30choices, then new calibrated outer inference; no new training."
+}

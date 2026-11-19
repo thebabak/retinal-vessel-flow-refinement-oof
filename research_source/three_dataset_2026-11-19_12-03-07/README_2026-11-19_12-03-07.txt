@@ -1,0 +1,7 @@
+Exact recorded source snapshot for the completed three-dataset extension.
+The original module names and bytes are preserved. This is separate from the repository's earlier portable adapters and does not extend their supported phases.
+All flow_matching_refiner modules, the retained baseline/OOF producer dependency chain and the official comparison wrappers are included. Third-party FMS2 and FR-UNet snapshots retain their notices.
+Execution needs the original retained tree, saved upstream models, source maps, validation locks and correctly licensed data. Recorded paths and artifact names remain historical input contracts. Publication did not execute these runners, import trained models, train, evaluate predictions or recalculate statistics.
+Run no worker/controller merely to inspect results. Use python -S -m tools.show_latest_results from the repository root to read saved summary values without scientific dependencies.
+New extension checkpoints and FP32 arrays are not included in this Git commit or Overleaf archive. The earlier artifact release covers its dated initial scope only.
+The source snapshot was syntax-checked only during publication; this does not claim a new portable end-to-end reproduction.

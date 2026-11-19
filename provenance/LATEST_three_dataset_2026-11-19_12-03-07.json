@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-11-19_12-03-07",
+  "title": "A Three-Dataset Evaluation of Flow Matching for Retinal Vessel Refinement with Native Patches and Nested Out-of-Fold Inputs",
+  "paper": "manuscripts/three_dataset_2026-11-19_07-40-21",
+  "pdf": "manuscripts/three_dataset_2026-11-19_07-40-21/retinal_flow_all_datasets_2026-11-19_07-40-21.pdf",
+  "tex": "manuscripts/three_dataset_2026-11-19_07-40-21/retinal_flow_all_datasets_2026-11-19_07-40-21.tex",
+  "zip": "manuscripts/three_dataset_2026-11-19_07-40-21/PUBLIC_MDPI_PDF_LaTeX_Overleaf_results_2026-11-19_12-03-07.zip",
+  "results": "results/three_dataset_2026-11-19_07-40-21",
+  "source": "research_source/three_dataset_2026-11-19_12-03-07",
+  "completion_doc": "docs/THREE_DATASET_COMPLETION_2026-11-19_12-03-07.md",
+  "mean_SD": "mean_SD_2026-11-19_07-12-53.csv",
+  "paired_tests": "paired_tests_2026-11-19_07-12-53.csv",
+  "release_tag": "three-dataset-2026-11-19_12-03-07",
+  "release_url": "https://github.com/thebabak/retinal-vessel-flow-refinement-oof/releases/tag/three-dataset-2026-11-19_12-03-07"
+}

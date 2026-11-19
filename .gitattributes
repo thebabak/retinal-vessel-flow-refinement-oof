@@ -3,3 +3,11 @@
 # Pinned third-party snapshots retain upstream whitespace and exact SHA256 bytes.
 comparisons/**/official_comparisons/vendor/** -whitespace
 *.py diff=python
+
+# Preserve byte-identical historical research sources, including upstream whitespace.
+research_source/** -whitespace
+
+# Manuscript/template bytes match the verified input project.
+manuscripts/** -whitespace
+*.pdf binary
+*.zip binary

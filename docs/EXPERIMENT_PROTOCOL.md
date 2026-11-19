@@ -1,3 +1,5 @@
+> Current study: see [THREE_DATASET_COMPLETION_2026-11-19_12-03-07.md](THREE_DATASET_COMPLETION_2026-11-19_12-03-07.md). This document records the earlier initial scope; dated progress and release statements below are historical.
+
 # Recorded experiment protocol
 
 This document describes the completed studies underlying the associated manuscript. It records the executed recipes and their limits; preparing this repository did not run a new experiment. Public path/entry-point adaptations are described in [PORTABILITY.md](PORTABILITY.md).
